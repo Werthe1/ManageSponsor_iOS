@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
 
     @IBOutlet weak var floatingButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
@@ -19,6 +19,9 @@ class HomeViewController: UIViewController {
     }
 
     func defaultPage() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
     }
@@ -28,6 +31,14 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(write, animated: true)
     }
     
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
 }
 
 
