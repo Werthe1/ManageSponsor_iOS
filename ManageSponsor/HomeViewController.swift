@@ -33,6 +33,8 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = "스크롤링해서 제목 넣기"
+        cell.detailTextLabel?.text = "날짜"
         return cell
     }
     

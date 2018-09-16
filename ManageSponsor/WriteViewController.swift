@@ -12,13 +12,15 @@ class WriteViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        defaultPage()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func defaultPage() {
+        self.navigationItem.title = "글쓰기"
+        
+        let titleText = UITextField()
+        titleText.placeholder = "제목을 입력하세요"
+        titleText.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
+        view.addSubview(titleText)
     }
-
 }
