@@ -14,6 +14,7 @@ extension HomeViewController {
     func defaultPage() {
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
         
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
@@ -25,13 +26,17 @@ extension HomeViewController {
 extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = "스크롤링해서 제목 넣기"
-        cell.detailTextLabel?.text = "날짜"
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeTableViewCell
+        cell.titleLabel.text = "스크롤링해서 제목 넣기"
+        cell.dateLabel.text = "날짜 긁어와서 넣기"
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
 }

@@ -13,14 +13,10 @@ class WriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultPage()
+        defaultNavigation()
     }
-
-    func defaultPage() {
-        self.navigationItem.title = "글쓰기"
-        
-        let titleText = UITextField()
-        titleText.placeholder = "제목을 입력하세요"
-        titleText.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(titleText)
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
     }
 }

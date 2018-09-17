@@ -25,7 +25,6 @@ class ViewController: UIViewController {
     }
     
     @objc func loginButtonPressed() {
-        
         if let st = self.storyboard?.instantiateViewController(withIdentifier: "NV") {
             present(st, animated: true, completion: nil)
         }

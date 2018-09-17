@@ -17,6 +17,9 @@
 		350547F5214A7007005B7531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350547F4214A7007005B7531 /* Assets.xcassets */; };
 		350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350547F6214A74C4005B7531 /* WriteViewController.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
+		35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */; };
+		35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B7214FE9E3004CB108 /* WriteView.swift */; };
+		35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B9214FEA22004CB108 /* HomeModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		350547F4214A7007005B7531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		350547F6214A74C4005B7531 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		35A199B7214FE9E3004CB108 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		35A199B9214FEA22004CB108 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,8 @@
 			isa = PBXGroup;
 			children = (
 				35A199B0214FE4D2004CB108 /* HomeView.swift */,
+				35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */,
+				35A199B7214FE9E3004CB108 /* WriteView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -107,6 +115,7 @@
 		35A199AC214FE413004CB108 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				35A199B9214FEA22004CB108 /* HomeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -114,7 +123,9 @@
 		35A199AD214FE431004CB108 /* Expire */ = {
 			isa = PBXGroup;
 			children = (
-				350547EE214A6168005B7531 /* ExpireViewController.swift */,
+				35A199BD214FEA3C004CB108 /* Model */,
+				35A199BC214FEA37004CB108 /* Controller */,
+				35A199BB214FEA31004CB108 /* View */,
 			);
 			path = Expire;
 			sourceTree = "<group>";
@@ -122,7 +133,9 @@
 		35A199AE214FE483004CB108 /* Log */ = {
 			isa = PBXGroup;
 			children = (
-				350547EC214A6160005B7531 /* LogViewController.swift */,
+				35A199C0214FEA4E004CB108 /* Model */,
+				35A199BF214FEA48004CB108 /* Controller */,
+				35A199BE214FEA43004CB108 /* View */,
 			);
 			path = Log;
 			sourceTree = "<group>";
@@ -130,9 +143,77 @@
 		35A199AF214FE4A4004CB108 /* Login */ = {
 			isa = PBXGroup;
 			children = (
-				350547DA214A50B2005B7531 /* ViewController.swift */,
+				35A199B6214FE9C7004CB108 /* Model */,
+				35A199B5214FE9C0004CB108 /* Controller */,
+				35A199B4214FE9B6004CB108 /* View */,
 			);
 			path = Login;
+			sourceTree = "<group>";
+		};
+		35A199B4214FE9B6004CB108 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35A199B5214FE9C0004CB108 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350547DA214A50B2005B7531 /* ViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35A199B6214FE9C7004CB108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35A199BB214FEA31004CB108 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35A199BC214FEA37004CB108 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350547EE214A6168005B7531 /* ExpireViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35A199BD214FEA3C004CB108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		35A199BE214FEA43004CB108 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		35A199BF214FEA48004CB108 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350547EC214A6160005B7531 /* LogViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		35A199C0214FEA4E004CB108 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,10 +289,13 @@
 			files = (
 				350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
+				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
 				350547DB214A50B2005B7531 /* ViewController.swift in Sources */,
 				350547D9214A50B2005B7531 /* AppDelegate.swift in Sources */,
 				350547EF214A6168005B7531 /* ExpireViewController.swift in Sources */,
+				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
+				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
 				350547ED214A6160005B7531 /* LogViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
