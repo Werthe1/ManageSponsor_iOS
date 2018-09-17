@@ -1,23 +1,16 @@
 //
-//  HomeViewController.swift
+//  HomeView.swift
 //  ManageSponsor
 //
-//  Created by hyerikim on 2018. 9. 13..
+//  Created by hyerikim on 2018. 9. 17..
 //  Copyright © 2018년 hyerikim. All rights reserved.
 //
 
 import UIKit
+import Foundation
 
-class HomeViewController: UIViewController , UITableViewDataSource, UITableViewDelegate{
-
-    @IBOutlet weak var floatingButton: UIButton!
-    @IBOutlet weak var tableView: UITableView!
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        defaultPage()
-    }
-
+//MARK: Default view manage
+extension HomeViewController {
     func defaultPage() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -26,10 +19,10 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
     }
 
-    @IBAction func writeButtonPressed(_ sender: Any) {
-        let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
-        self.navigationController?.pushViewController(write, animated: true)
-    }
+}
+
+//MARK: Manage tableview
+extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
@@ -42,5 +35,3 @@ class HomeViewController: UIViewController , UITableViewDataSource, UITableViewD
         return 10
     }
 }
-
-
