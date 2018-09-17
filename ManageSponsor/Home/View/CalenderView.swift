@@ -136,6 +136,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         let cell=collectionView.cellForItem(at: indexPath)
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.black
+        let calender = Notification.Name(rawValue: calenderClicked)
+        NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":Date()])
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

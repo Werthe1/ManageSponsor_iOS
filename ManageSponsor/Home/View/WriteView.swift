@@ -22,6 +22,7 @@ extension WriteViewController {
         titleText.placeholder = "제목을 입력하세요"
         titleText.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
         view.addSubview(titleText)
+        createObservers()
     }
     
     func defaultNavigation() {
@@ -31,6 +32,14 @@ extension WriteViewController {
 
         let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "scheduleiconicon"), style: .done, target: self, action: #selector(pressedButton))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
+    }
+    
+    func createObservers(){
+        NotificationCenter.default.addObserver(self, selector: #selector(calenderSelect(notification:)), name: calender, object: nil)
+    }
+    
+    @objc func calenderSelect(notification: NSNotification){
+        print(notification)
     }
     
     @objc func pressedButton(){

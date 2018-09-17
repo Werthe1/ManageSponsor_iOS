@@ -11,6 +11,7 @@ import UIKit
 class WriteViewController: UIViewController {
 
     var theme = MyTheme.dark
+    let calender = Notification.Name(rawValue: calenderClicked)
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,5 +21,9 @@ class WriteViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
         self.view.endEditing(true)
+    }
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
 }
