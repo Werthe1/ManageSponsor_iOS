@@ -23,6 +23,7 @@
 		35A199C2214FEE62004CB108 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C1214FEE62004CB108 /* MonthView.swift */; };
 		35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C3214FFA8E004CB108 /* WeekView.swift */; };
 		35A199C621500145004CB108 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C521500145004CB108 /* CalenderView.swift */; };
+		35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +45,7 @@
 		35A199C1214FEE62004CB108 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
 		35A199C3214FFA8E004CB108 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
 		35A199C521500145004CB108 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
+		35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCalenderViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 			children = (
 				350547F6214A74C4005B7531 /* WriteViewController.swift */,
 				350547F0214A6DFF005B7531 /* HomeViewController.swift */,
+				35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				350547DB214A50B2005B7531 /* ViewController.swift in Sources */,
 				350547D9214A50B2005B7531 /* AppDelegate.swift in Sources */,
 				350547EF214A6168005B7531 /* ExpireViewController.swift in Sources */,
+				35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */,
 				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
 				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
 				350547ED214A6160005B7531 /* LogViewController.swift in Sources */,

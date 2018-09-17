@@ -16,11 +16,12 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultPage()
+        defaultNavi()
     }
 
     @IBAction func writeButtonPressed(_ sender: Any) {
         let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
-        self.navigationController?.pushViewController(write, animated: true)
+        self.navigationController?.pushViewController(write, animated: false)
     }
 }
 

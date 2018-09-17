@@ -9,6 +9,41 @@
 import Foundation
 import UIKit
 
+struct Colors {
+    static var darkGray = #colorLiteral(red: 0.3764705882, green: 0.3647058824, blue: 0.3647058824, alpha: 1)
+    static var darkRed = #colorLiteral(red: 0.5019607843, green: 0.1529411765, blue: 0.1764705882, alpha: 1)
+}
+
+struct Style {
+    static var bgColor = UIColor.white
+    static var monthViewLblColor = UIColor.white
+    static var monthViewBtnRightColor = UIColor.white
+    static var monthViewBtnLeftColor = UIColor.white
+    static var activeCellLblColor = UIColor.white
+    static var activeCellLblColorHighlighted = UIColor.black
+    static var weekdaysLblColor = UIColor.white
+    
+    static func themeDark(){
+        bgColor = Colors.darkGray
+        monthViewLblColor = UIColor.white
+        monthViewBtnRightColor = UIColor.white
+        monthViewBtnLeftColor = UIColor.white
+        activeCellLblColor = UIColor.white
+        activeCellLblColorHighlighted = UIColor.black
+        weekdaysLblColor = UIColor.white
+    }
+    
+    static func themeLight(){
+        bgColor = UIColor.white
+        monthViewLblColor = UIColor.black
+        monthViewBtnRightColor = UIColor.black
+        monthViewBtnLeftColor = UIColor.black
+        activeCellLblColor = UIColor.black
+        activeCellLblColorHighlighted = UIColor.white
+        weekdaysLblColor = UIColor.black
+    }
+}
+
 class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource, monthViewDelegate {
     
     var numberDaysInMonth = [31,28,31,30,31,30,31,31,30,31,30,31]
@@ -24,17 +59,27 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         initializeView()
     }
     
+    convenience init(theme: MyTheme) {
+        self.init()
+        
+        if theme == .dark {
+            Style.themeDark()
+        } else {
+            Style.themeLight()
+        }
+        
+        initializeView()
+    }
+    
     func initializeView() {
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())
         todayDate = Calendar.current.component(.day, from: Date())
         firstWeekDayOfMonth=getFirstWeekDay()
         
-        //for leap years, make february month of 29 days
         if currentMonthIndex == 2 && currentYear % 4 == 0 {
             numberDaysInMonth[currentMonthIndex-1] = 29
         }
-        //end
         
         presentMonthIndex=currentMonthIndex
         presentYear=currentYear
@@ -90,13 +135,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         let lbl = cell?.subviews[1] as! UILabel
-        lbl.textColor=UIColor.white
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        let cell=collectionView.cellForItem(at: indexPath)
-        cell?.backgroundColor=UIColor.clear
-        let lbl = cell?.subviews[1] as! UILabel
+        lbl.textColor=UIColor.black
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -115,7 +154,6 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     
     func getFirstWeekDay() -> Int {
         let day = ("\(currentYear)-\(currentMonthIndex)-01".date?.firstDayOfTheMonth.weekday)!
-        //return day == 7 ? 1 : day
         return day
     }
     
@@ -165,7 +203,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }()
     
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        fatalError("not been implemented")
     }
 }
 
@@ -201,7 +239,6 @@ class dateCVCell: UICollectionViewCell {
     }
 }
 
-//get first day of the month
 extension Date {
     var weekday: Int {
         return Calendar.current.component(.weekday, from: self)
@@ -211,7 +248,6 @@ extension Date {
     }
 }
 
-//get date from string
 extension String {
     static var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()

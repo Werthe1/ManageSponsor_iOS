@@ -10,6 +10,8 @@ import UIKit
 
 class WriteViewController: UIViewController {
 
+    var theme = MyTheme.dark
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultPage()

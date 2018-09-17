@@ -19,6 +19,10 @@ extension HomeViewController {
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
     }
+    
+    func defaultNavi() {
+        self.navigationController?.navigationBar.topItem?.title = " "
+    }
 
 }
 

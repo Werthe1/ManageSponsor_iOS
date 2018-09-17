@@ -9,6 +9,11 @@
 import Foundation
 import UIKit
 
+enum MyTheme {
+    case light
+    case dark
+}
+
 extension WriteViewController {
     func defaultPage() {
         self.navigationItem.title = "글쓰기"
@@ -22,7 +27,15 @@ extension WriteViewController {
     func defaultNavigation() {
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backbuttonicon")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backbuttonicon")
-        self.navigationController?.navigationBar.topItem?.title = ""
+        self.navigationController?.navigationBar.topItem?.title = " "
 
+        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "scheduleiconicon"), style: .done, target: self, action: #selector(pressedButton))
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
+    
+    @objc func pressedButton(){
+        let uv = self.storyboard?.instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
+        self.navigationController?.pushViewController(uv, animated: true)
+    }
+    
 }
