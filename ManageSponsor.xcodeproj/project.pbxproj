@@ -20,6 +20,9 @@
 		35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */; };
 		35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B7214FE9E3004CB108 /* WriteView.swift */; };
 		35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B9214FEA22004CB108 /* HomeModel.swift */; };
+		35A199C2214FEE62004CB108 /* MonthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C1214FEE62004CB108 /* MonthView.swift */; };
+		35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C3214FFA8E004CB108 /* WeekView.swift */; };
+		35A199C621500145004CB108 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C521500145004CB108 /* CalenderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +41,9 @@
 		35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		35A199B7214FE9E3004CB108 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
 		35A199B9214FEA22004CB108 /* HomeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeModel.swift; sourceTree = "<group>"; };
+		35A199C1214FEE62004CB108 /* MonthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonthView.swift; sourceTree = "<group>"; };
+		35A199C3214FFA8E004CB108 /* WeekView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekView.swift; sourceTree = "<group>"; };
+		35A199C521500145004CB108 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +105,9 @@
 				35A199B0214FE4D2004CB108 /* HomeView.swift */,
 				35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */,
 				35A199B7214FE9E3004CB108 /* WriteView.swift */,
+				35A199C1214FEE62004CB108 /* MonthView.swift */,
+				35A199C3214FFA8E004CB108 /* WeekView.swift */,
+				35A199C521500145004CB108 /* CalenderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -287,8 +296,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */,
+				35A199C2214FEE62004CB108 /* MonthView.swift in Sources */,
 				350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
+				35A199C621500145004CB108 /* CalenderView.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
 				350547DB214A50B2005B7531 /* ViewController.swift in Sources */,
