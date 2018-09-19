@@ -94,7 +94,7 @@
                                 <rect key="frame" x="303" y="553" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.62352941179999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" image="writeicon">
+                                <state key="normal" image="write">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
@@ -111,7 +111,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fbP-XR-xOK"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="일정" image="scheduleiconicon" selectedImage="scheduleiconicon" id="nmj-hX-k9i"/>
+                    <tabBarItem key="tabBarItem" title="일정" image="today" selectedImage="today" id="nmj-hX-k9i"/>
                     <connections>
                         <outlet property="floatingButton" destination="8aL-pe-ora" id="ftO-yh-fnl"/>
                         <outlet property="tableView" destination="UEd-nG-ZgJ" id="6Pm-9J-p69"/>
@@ -143,13 +143,35 @@
                     <view key="view" contentMode="scaleToFill" id="Ewl-KK-BjV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.29999999999999999" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-Ih-gmU">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gJ9-Vd-UV8">
+                                <rect key="frame" x="16" y="92.5" width="343" height="482"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="482" id="9EM-RA-jrH"/>
+                                    <constraint firstAttribute="width" constant="343" id="eiF-5q-CIP"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gJ9-Vd-UV8" firstAttribute="centerX" secondItem="Ewl-KK-BjV" secondAttribute="centerX" id="EW8-V5-2QR"/>
+                            <constraint firstItem="OJI-Ih-gmU" firstAttribute="trailing" secondItem="23c-mh-fdG" secondAttribute="trailing" id="H8I-UU-ggf"/>
+                            <constraint firstItem="23c-mh-fdG" firstAttribute="bottom" secondItem="OJI-Ih-gmU" secondAttribute="bottom" id="RbA-e5-1av"/>
+                            <constraint firstItem="gJ9-Vd-UV8" firstAttribute="centerY" secondItem="Ewl-KK-BjV" secondAttribute="centerY" id="YoA-iQ-Pgh"/>
+                            <constraint firstItem="OJI-Ih-gmU" firstAttribute="top" secondItem="23c-mh-fdG" secondAttribute="top" id="nKr-CQ-qsT"/>
+                            <constraint firstItem="OJI-Ih-gmU" firstAttribute="leading" secondItem="23c-mh-fdG" secondAttribute="leading" id="u1q-1C-Wlw"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="23c-mh-fdG"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="QGp-et-7b6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1558" y="1617"/>
+            <point key="canvasLocation" x="1557.5999999999999" y="1616.9415292353824"/>
         </scene>
         <!--로그-->
         <scene sceneID="48q-8k-sK3">
@@ -183,7 +205,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="DnB-Qq-IqQ"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="로그" image="logicon" selectedImage="logicon" id="3Fo-0z-mix"/>
+                    <tabBarItem key="tabBarItem" title="로그" image="log" selectedImage="log" id="3Fo-0z-mix"/>
                     <connections>
                         <outlet property="tableView" destination="2Sn-y3-IvI" id="Iql-eb-2LU"/>
                     </connections>
@@ -199,10 +221,35 @@
                     <view key="view" contentMode="scaleToFill" id="8TE-Oz-8Ll">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zWw-KO-hXE">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="te9-BZ-Jwq">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="te9-BZ-Jwq" id="IJf-Un-Vvo">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="zWw-KO-hXE" secondAttribute="trailing" id="6zc-p3-sQB"/>
+                            <constraint firstItem="zWw-KO-hXE" firstAttribute="top" secondItem="RrX-yU-51f" secondAttribute="top" id="LvU-4a-YW4"/>
+                            <constraint firstItem="RrX-yU-51f" firstAttribute="bottom" secondItem="zWw-KO-hXE" secondAttribute="bottom" id="cYx-od-KgT"/>
+                            <constraint firstItem="zWw-KO-hXE" firstAttribute="leading" secondItem="RrX-yU-51f" secondAttribute="leading" id="dpl-d0-chj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="RrX-yU-51f"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="약정" image="expireicon" selectedImage="expireicon" id="D79-Ae-70L"/>
+                    <tabBarItem key="tabBarItem" title="약정" image="alarm" selectedImage="alarm" id="D79-Ae-70L"/>
+                    <connections>
+                        <outlet property="tableView" destination="zWw-KO-hXE" id="2lJ-y4-WFS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CT9-s2-Une" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -231,9 +278,9 @@
         </scene>
     </scenes>
     <resources>
-        <image name="expireicon" width="24" height="24"/>
-        <image name="logicon" width="24" height="24"/>
-        <image name="scheduleiconicon" width="24" height="24"/>
-        <image name="writeicon" width="24" height="24"/>
+        <image name="alarm" width="24" height="24"/>
+        <image name="log" width="24" height="24"/>
+        <image name="today" width="24" height="24"/>
+        <image name="write" width="24" height="24"/>
     </resources>
 </document>

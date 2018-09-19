@@ -16,6 +16,7 @@
 		350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350547F0214A6DFF005B7531 /* HomeViewController.swift */; };
 		350547F5214A7007005B7531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350547F4214A7007005B7531 /* Assets.xcassets */; };
 		350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350547F6214A74C4005B7531 /* WriteViewController.swift */; };
+		3516423C2152C17700A339EC /* ExpireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516423B2152C17700A339EC /* ExpireView.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
 		35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */; };
 		35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B7214FE9E3004CB108 /* WriteView.swift */; };
@@ -39,6 +40,7 @@
 		350547F0214A6DFF005B7531 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		350547F4214A7007005B7531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		350547F6214A74C4005B7531 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		3516423B2152C17700A339EC /* ExpireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireView.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		35A199B7214FE9E3004CB108 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
@@ -108,7 +110,6 @@
 			isa = PBXGroup;
 			children = (
 				35A199B0214FE4D2004CB108 /* HomeView.swift */,
-				35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */,
 				35A199B7214FE9E3004CB108 /* WriteView.swift */,
 				35A199C1214FEE62004CB108 /* MonthView.swift */,
 				35A199C3214FFA8E004CB108 /* WeekView.swift */,
@@ -120,6 +121,7 @@
 		35A199AB214FE40E004CB108 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */,
 				350547F6214A74C4005B7531 /* WriteViewController.swift */,
 				350547F0214A6DFF005B7531 /* HomeViewController.swift */,
 				35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */,
@@ -190,6 +192,7 @@
 		35A199BB214FEA31004CB108 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3516423B2152C17700A339EC /* ExpireView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */,
 				35A199C2214FEE62004CB108 /* MonthView.swift in Sources */,
 				350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */,
+				3516423C2152C17700A339EC /* ExpireView.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
 				35A199C621500145004CB108 /* CalenderView.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,

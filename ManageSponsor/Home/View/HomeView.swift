@@ -18,6 +18,9 @@ extension HomeViewController {
         
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
+        floatingButton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+        floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        
     }
     
     func defaultNavi() {

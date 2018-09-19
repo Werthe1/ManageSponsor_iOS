@@ -81,8 +81,8 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
             numberDaysInMonth[currentMonthIndex-1] = 29
         }
         
-        presentMonthIndex=currentMonthIndex
-        presentYear=currentYear
+        presentMonthIndex = currentMonthIndex
+        presentYear = currentYear
         
         setupViews()
         
@@ -92,7 +92,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func didChnageMonthView(monthIndex: Int, year: Int) {
-        currentMonthIndex=monthIndex+1
+        currentMonthIndex = monthIndex+1
         currentYear = year
         
         if monthIndex == 1 {
@@ -114,7 +114,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell=collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
         cell.backgroundColor=UIColor.clear
         if indexPath.item <= firstWeekDayOfMonth - 2 {
             cell.isHidden=true
@@ -137,7 +137,9 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         let lbl = cell?.subviews[1] as! UILabel
         lbl.textColor=UIColor.black
         let calender = Notification.Name(rawValue: calenderClicked)
-        NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":Date()])
+        NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":" \(currentYear) \(currentMonthIndex) \(indexPath.row-firstWeekDayOfMonth+2)"])
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

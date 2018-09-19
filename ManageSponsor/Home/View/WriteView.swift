@@ -30,7 +30,7 @@ extension WriteViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backbuttonicon")
         self.navigationController?.navigationBar.topItem?.title = " "
 
-        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "scheduleiconicon"), style: .done, target: self, action: #selector(pressedButton))
+        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "today"), style: .done, target: self, action: #selector(pressedButton))
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
