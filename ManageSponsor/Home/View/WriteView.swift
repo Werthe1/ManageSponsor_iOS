@@ -44,6 +44,8 @@ extension WriteViewController {
     
     @objc func pressedButton(){
         let uv = self.storyboard?.instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
+//        uv.modalPresentationStyle = .overCurrentContext
+//        self.present(uv, animated: true, completion: nil)
         self.navigationController?.pushViewController(uv, animated: true)
     }
     
