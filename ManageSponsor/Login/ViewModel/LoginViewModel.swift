@@ -9,6 +9,7 @@
 import UIKit
 
 class LoginViewModel {
+    
     private var userInfo : User
     
     init(name: String, phoneNumber: String, email: String) {

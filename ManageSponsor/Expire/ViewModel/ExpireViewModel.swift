@@ -1,16 +1,16 @@
 //
-//  LogViewModel.swift
+//  ExpireViewModel.swift
 //  ManageSponsor
 //
-//  Created by hyerikim on 2018. 9. 22..
+//  Created by hyerikim on 2018. 9. 26..
 //  Copyright © 2018년 hyerikim. All rights reserved.
 //
 
 import UIKit
 
-class LogViewModel {
+class ExprieViewModel {
     
-    private var logModel : LogModel
+    private var expireModel : LogModel
     
     init(log: String, date: String) {
         self.logModel = LogModel(log: log, date: date)
@@ -25,3 +25,5 @@ class LogViewModel {
     }
     
 }
+
+

@@ -21,6 +21,8 @@
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
 		355B21F821556B8700D9270F /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F721556B8700D9270F /* LogViewModel.swift */; };
 		355E1BF7215A3D9900DFC914 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E1BF6215A3D9900DFC914 /* LogModel.swift */; };
+		356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D3215BC10200365264 /* ExpireModel.swift */; };
+		356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D5215BC10A00365264 /* ExpireViewModel.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
 		35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */; };
 		35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B7214FE9E3004CB108 /* WriteView.swift */; };
@@ -49,6 +51,8 @@
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		355B21F721556B8700D9270F /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
 		355E1BF6215A3D9900DFC914 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		356FE6D3215BC10200365264 /* ExpireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireModel.swift; sourceTree = "<group>"; };
+		356FE6D5215BC10A00365264 /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		35A199B7214FE9E3004CB108 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
@@ -211,6 +215,7 @@
 		35A199BC214FEA37004CB108 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				356FE6D5215BC10A00365264 /* ExpireViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -218,6 +223,7 @@
 		35A199BD214FEA3C004CB108 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				356FE6D3215BC10200365264 /* ExpireModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -342,6 +348,8 @@
 				355B21F821556B8700D9270F /* LogViewModel.swift in Sources */,
 				355B21F62155695600D9270F /* LoginModel.swift in Sources */,
 				35A199CB21502604004CB108 /* Notification.swift in Sources */,
+				356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */,
+				356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */,
 				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
 				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
 				350547ED214A6160005B7531 /* LogViewController.swift in Sources */,
