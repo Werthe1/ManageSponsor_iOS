@@ -13,15 +13,15 @@ class ExprieViewModel {
     private var expireModel : LogModel
     
     init(log: String, date: String) {
-        self.logModel = LogModel(log: log, date: date)
+        self.expireModel = LogModel(log: log, date: date)
     }
     
     var log: String {
-        return logModel.log
+        return expireModel.log
     }
     
     var date: String {
-        return logModel.date
+        return expireModel.date
     }
     
 }

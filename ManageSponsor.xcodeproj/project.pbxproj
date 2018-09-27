@@ -17,6 +17,7 @@
 		350547F5214A7007005B7531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350547F4214A7007005B7531 /* Assets.xcassets */; };
 		350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350547F6214A74C4005B7531 /* WriteViewController.swift */; };
 		3516423C2152C17700A339EC /* ExpireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516423B2152C17700A339EC /* ExpireView.swift */; };
+		3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD64215CDAF100867598 /* TabbarViewController.swift */; };
 		355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F32155694C00D9270F /* LoginViewModel.swift */; };
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
 		355B21F821556B8700D9270F /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F721556B8700D9270F /* LogViewModel.swift */; };
@@ -47,6 +48,7 @@
 		350547F4214A7007005B7531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		350547F6214A74C4005B7531 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		3516423B2152C17700A339EC /* ExpireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireView.swift; sourceTree = "<group>"; };
+		3542DD64215CDAF100867598 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		355B21F32155694C00D9270F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		355B21F721556B8700D9270F /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				35A199C1214FEE62004CB108 /* MonthView.swift */,
 				35A199C3214FFA8E004CB108 /* WeekView.swift */,
 				35A199C521500145004CB108 /* CalenderView.swift */,
+				3542DD64215CDAF100867598 /* TabbarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -341,6 +344,7 @@
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
 				355E1BF7215A3D9900DFC914 /* LogModel.swift in Sources */,
 				350547DB214A50B2005B7531 /* ViewController.swift in Sources */,
+				3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */,
 				350547D9214A50B2005B7531 /* AppDelegate.swift in Sources */,
 				355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */,
 				350547EF214A6168005B7531 /* ExpireViewController.swift in Sources */,
