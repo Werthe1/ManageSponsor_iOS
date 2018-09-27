@@ -15,7 +15,13 @@ class TabbarViewController: UITabBarController {
     override func viewDidLoad() {
         super.viewDidLoad()
         selectedIndex = defaultIndex
-
+        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "setting"), style: .done, target: self, action: #selector(TabbarViewController.setting))
+        
+        self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
-
+    
+    @objc func setting() {
+        let st = self.storyboard?.instantiateViewController(withIdentifier: "Setting") as! SettingViewController
+        self.navigationController?.pushViewController(st, animated: true)
+    }
 }

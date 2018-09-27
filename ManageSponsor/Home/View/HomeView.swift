@@ -11,6 +11,7 @@ import Foundation
 
 //MARK: Default view manage
 extension HomeViewController {
+    
     func defaultPage() {
         tableView.delegate = self
         tableView.dataSource = self
