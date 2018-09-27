@@ -12,6 +12,7 @@ class WriteViewController: UIViewController {
 
     var theme = MyTheme.dark
     let calender = Notification.Name(rawValue: calenderClicked)
+    @IBOutlet weak var calButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

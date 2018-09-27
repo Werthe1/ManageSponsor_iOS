@@ -19,6 +19,8 @@
 		3516423C2152C17700A339EC /* ExpireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516423B2152C17700A339EC /* ExpireView.swift */; };
 		3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD64215CDAF100867598 /* TabbarViewController.swift */; };
 		3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD66215CDDA600867598 /* SettingViewController.swift */; };
+		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
+		3542DD6B215CFE1000867598 /* ExpireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */; };
 		355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F32155694C00D9270F /* LoginViewModel.swift */; };
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
 		355B21F821556B8700D9270F /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F721556B8700D9270F /* LogViewModel.swift */; };
@@ -51,6 +53,8 @@
 		3516423B2152C17700A339EC /* ExpireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireView.swift; sourceTree = "<group>"; };
 		3542DD64215CDAF100867598 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		3542DD66215CDDA600867598 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireTableViewCell.swift; sourceTree = "<group>"; };
 		355B21F32155694C00D9270F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		355B21F721556B8700D9270F /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
@@ -130,6 +134,7 @@
 				350547F0214A6DFF005B7531 /* HomeViewController.swift */,
 				35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */,
 				35A199B0214FE4D2004CB108 /* HomeView.swift */,
+				3542DD68215CEC5600867598 /* SettingView.swift */,
 				3542DD66215CDDA600867598 /* SettingViewController.swift */,
 				35A199B7214FE9E3004CB108 /* WriteView.swift */,
 				35A199C1214FEE62004CB108 /* MonthView.swift */,
@@ -214,6 +219,7 @@
 			children = (
 				350547EE214A6168005B7531 /* ExpireViewController.swift */,
 				3516423B2152C17700A339EC /* ExpireView.swift */,
+				3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -343,9 +349,11 @@
 				3516423C2152C17700A339EC /* ExpireView.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
 				35A199C621500145004CB108 /* CalenderView.swift in Sources */,
+				3542DD69215CEC5600867598 /* SettingView.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
 				355E1BF7215A3D9900DFC914 /* LogModel.swift in Sources */,
+				3542DD6B215CFE1000867598 /* ExpireTableViewCell.swift in Sources */,
 				350547DB214A50B2005B7531 /* ViewController.swift in Sources */,
 				3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */,
 				3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */,

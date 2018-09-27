@@ -17,11 +17,6 @@ enum MyTheme {
 extension WriteViewController {
     func defaultPage() {
         self.navigationItem.title = "글쓰기"
-        
-        let titleText = UITextField()
-        titleText.placeholder = "제목을 입력하세요"
-        titleText.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: self.view.frame.height)
-        view.addSubview(titleText)
         createObservers()
     }
     
@@ -30,7 +25,8 @@ extension WriteViewController {
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backbuttonicon")
         self.navigationController?.navigationBar.topItem?.title = " "
 
-        let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "today"), style: .done, target: self, action: #selector(pressedButton))
+        let rightBarButtonItem = UIBarButtonItem.init(title: "확인", style: .done, target: self, action: #selector(doneButton))
+        calButton.addTarget(self, action: #selector(pressedButton), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
@@ -44,9 +40,11 @@ extension WriteViewController {
     
     @objc func pressedButton(){
         let uv = self.storyboard?.instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
-//        uv.modalPresentationStyle = .overCurrentContext
-//        self.present(uv, animated: true, completion: nil)
         self.navigationController?.pushViewController(uv, animated: true)
+    }
+    
+    @objc func doneButton() {
+        self.navigationController?.popViewController(animated: true)
     }
     
 }
