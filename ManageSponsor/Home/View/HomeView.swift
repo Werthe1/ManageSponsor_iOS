@@ -26,6 +26,7 @@ extension HomeViewController {
     
     func defaultNavi() {
         self.navigationController?.navigationBar.topItem?.title = " "
+        self.navigationController?.navigationBar.tintColor = UIColor.black
     }
 
 }
