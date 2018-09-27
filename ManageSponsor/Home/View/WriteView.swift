@@ -17,6 +17,10 @@ enum MyTheme {
 extension WriteViewController {
     func defaultPage() {
         self.navigationItem.title = "글쓰기"
+        textView.layer.borderWidth = 1
+        textView.layer.borderColor = UIColor.darkGray.cgColor
+        textView.layer.cornerRadius = 5
+        calButton.layer.cornerRadius = calButton.frame.width/2
         createObservers()
     }
     
@@ -24,7 +28,7 @@ extension WriteViewController {
         self.navigationController?.navigationBar.backIndicatorImage = UIImage(named: "backbuttonicon")
         self.navigationController?.navigationBar.backIndicatorTransitionMaskImage = UIImage(named: "backbuttonicon")
         self.navigationController?.navigationBar.topItem?.title = " "
-
+        self.navigationController?.navigationBar.tintColor = UIColor.black
         let rightBarButtonItem = UIBarButtonItem.init(title: "확인", style: .done, target: self, action: #selector(doneButton))
         calButton.addTarget(self, action: #selector(pressedButton), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = rightBarButtonItem

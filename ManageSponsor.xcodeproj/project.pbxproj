@@ -21,6 +21,7 @@
 		3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD66215CDDA600867598 /* SettingViewController.swift */; };
 		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
 		3542DD6B215CFE1000867598 /* ExpireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */; };
+		3542DD6D215D01BD00867598 /* ExpireDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */; };
 		355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F32155694C00D9270F /* LoginViewModel.swift */; };
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
 		355B21F821556B8700D9270F /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F721556B8700D9270F /* LogViewModel.swift */; };
@@ -55,6 +56,7 @@
 		3542DD66215CDDA600867598 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireTableViewCell.swift; sourceTree = "<group>"; };
+		3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireDetailViewController.swift; sourceTree = "<group>"; };
 		355B21F32155694C00D9270F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		355B21F721556B8700D9270F /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
@@ -220,6 +222,7 @@
 				350547EE214A6168005B7531 /* ExpireViewController.swift */,
 				3516423B2152C17700A339EC /* ExpireView.swift */,
 				3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */,
+				3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */,
+				3542DD6D215D01BD00867598 /* ExpireDetailViewController.swift in Sources */,
 				35A199C2214FEE62004CB108 /* MonthView.swift in Sources */,
 				350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */,
 				3516423C2152C17700A339EC /* ExpireView.swift in Sources */,

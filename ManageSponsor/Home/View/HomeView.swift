@@ -35,13 +35,13 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeTableViewCell
-        cell.titleLabel.text = "스크롤링해서 제목 넣기"
-        cell.dateLabel.text = "날짜 긁어와서 넣기"
+        cell.titleLabel.text = array1[indexPath.row]
+        cell.dateLabel.text = array2[indexPath.row]
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return array1.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

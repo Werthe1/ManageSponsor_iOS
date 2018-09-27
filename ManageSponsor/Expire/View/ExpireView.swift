@@ -25,19 +25,24 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExpireTableViewCell
-        cell.nameLabel.text = "이지윤"
-        cell.purposeLabel.text = " 학교 / 소프트웨어공학 / 발전기금 "
-        cell.dateLabel.text = "2018-10-20"
+        cell.nameLabel.text = array1[indexPath.row]
+        cell.purposeLabel.text = array2[indexPath.row]
+        cell.dateLabel.text = array3[indexPath.row]
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return array1.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let nv = self.storyboard?.instantiateViewController(withIdentifier: "ExpireDetail") as! ExpireDetailViewController
+        self.navigationController?.pushViewController(nv, animated: true)
     }
 
 }
