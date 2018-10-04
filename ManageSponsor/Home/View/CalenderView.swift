@@ -139,7 +139,6 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         let calender = Notification.Name(rawValue: calenderClicked)
         NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":" \(currentYear) \(currentMonthIndex) \(indexPath.row-firstWeekDayOfMonth+2)"])
         
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

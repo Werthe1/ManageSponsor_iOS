@@ -7,3 +7,14 @@
 //
 
 import UIKit
+
+class HomeModel {
+    
+    var log : String
+    var date : String
+    
+    init(log: String, date: String) {
+        self.log = log
+        self.date = date
+    }
+}

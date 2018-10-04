@@ -37,6 +37,7 @@
 		35A199C621500145004CB108 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C521500145004CB108 /* CalenderView.swift */; };
 		35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */; };
 		35A199CB21502604004CB108 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199CA21502604004CB108 /* Notification.swift */; };
+		35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9DA592166023700DE8329 /* HomeViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +73,7 @@
 		35A199C521500145004CB108 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCalenderViewController.swift; sourceTree = "<group>"; };
 		35A199CA21502604004CB108 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		35A9DA592166023700DE8329 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 		35A199AB214FE40E004CB108 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				35A9DA592166023700DE8329 /* HomeViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 				355B21F62155695600D9270F /* LoginModel.swift in Sources */,
 				35A199CB21502604004CB108 /* Notification.swift in Sources */,
 				356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */,
+				35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */,
 				356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */,
 				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
 				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
