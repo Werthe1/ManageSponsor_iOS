@@ -1,0 +1,6 @@
+framework module Pods_ManageSponsor {
+  umbrella header "Pods-ManageSponsor-umbrella.h"
+
+  export *
+  module * { export * }
+}

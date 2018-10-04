@@ -38,9 +38,11 @@
 		35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */; };
 		35A199CB21502604004CB108 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199CA21502604004CB108 /* Notification.swift */; };
 		35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9DA592166023700DE8329 /* HomeViewModel.swift */; };
+		DFF521ECD3F86E5ABA51AB2A /* Pods_ManageSponsor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA74E595F84B7CB15EB800 /* Pods_ManageSponsor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		16C80F4F878866E00C15918D /* Pods-ManageSponsor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageSponsor.release.xcconfig"; path = "Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor.release.xcconfig"; sourceTree = "<group>"; };
 		350547D5214A50B2005B7531 /* ManageSponsor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ManageSponsor.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		350547D8214A50B2005B7531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		350547DA214A50B2005B7531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -74,6 +76,8 @@
 		35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCalenderViewController.swift; sourceTree = "<group>"; };
 		35A199CA21502604004CB108 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		35A9DA592166023700DE8329 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		5685E738A477F99768FA42D4 /* Pods-ManageSponsor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageSponsor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor.debug.xcconfig"; sourceTree = "<group>"; };
+		70AA74E595F84B7CB15EB800 /* Pods_ManageSponsor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManageSponsor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,18 +85,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DFF521ECD3F86E5ABA51AB2A /* Pods_ManageSponsor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E477EBACF854661C18529F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5685E738A477F99768FA42D4 /* Pods-ManageSponsor.debug.xcconfig */,
+				16C80F4F878866E00C15918D /* Pods-ManageSponsor.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		350547CC214A50B2005B7531 = {
 			isa = PBXGroup;
 			children = (
 				350547D7214A50B2005B7531 /* ManageSponsor */,
 				350547F4214A7007005B7531 /* Assets.xcassets */,
 				350547D6214A50B2005B7531 /* Products */,
+				2E477EBACF854661C18529F6 /* Pods */,
+				56275120BFD6EA9584C278CB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -278,6 +294,14 @@
 			path = Helper;
 			sourceTree = "<group>";
 		};
+		56275120BFD6EA9584C278CB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70AA74E595F84B7CB15EB800 /* Pods_ManageSponsor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -285,9 +309,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 350547E7214A50B5005B7531 /* Build configuration list for PBXNativeTarget "ManageSponsor" */;
 			buildPhases = (
+				1192E36CCB0D2234C46DC16C /* [CP] Check Pods Manifest.lock */,
 				350547D1214A50B2005B7531 /* Sources */,
 				350547D2214A50B2005B7531 /* Frameworks */,
 				350547D3214A50B2005B7531 /* Resources */,
+				88C415971A5BE2AF33024E44 /* [CP] Embed Pods Frameworks */,
+				D4C3383D3BE45041EF273487 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -343,6 +370,62 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1192E36CCB0D2234C46DC16C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-ManageSponsor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		88C415971A5BE2AF33024E44 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D4C3383D3BE45041EF273487 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		350547D1214A50B2005B7531 /* Sources */ = {
@@ -518,15 +601,13 @@
 		};
 		350547E8214A50B5005B7531 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5685E738A477F99768FA42D4 /* Pods-ManageSponsor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -536,15 +617,13 @@
 		};
 		350547E9214A50B5005B7531 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16C80F4F878866E00C15918D /* Pods-ManageSponsor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-				);
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
