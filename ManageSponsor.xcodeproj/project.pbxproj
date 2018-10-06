@@ -26,6 +26,8 @@
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
 		355B21F821556B8700D9270F /* LogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F721556B8700D9270F /* LogViewModel.swift */; };
 		355E1BF7215A3D9900DFC914 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E1BF6215A3D9900DFC914 /* LogModel.swift */; };
+		3568B0C52168936F006D0218 /* CalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568B0C42168936F006D0218 /* CalenderHelper.swift */; };
+		3568B0C721689391006D0218 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568B0C621689391006D0218 /* CalenderCell.swift */; };
 		356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D3215BC10200365264 /* ExpireModel.swift */; };
 		356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D5215BC10A00365264 /* ExpireViewModel.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
@@ -64,6 +66,8 @@
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
 		355B21F721556B8700D9270F /* LogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogViewModel.swift; sourceTree = "<group>"; };
 		355E1BF6215A3D9900DFC914 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
+		3568B0C42168936F006D0218 /* CalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderHelper.swift; sourceTree = "<group>"; };
+		3568B0C621689391006D0218 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
 		356FE6D3215BC10200365264 /* ExpireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireModel.swift; sourceTree = "<group>"; };
 		356FE6D5215BC10A00365264 /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -160,6 +164,7 @@
 				35A199C1214FEE62004CB108 /* MonthView.swift */,
 				35A199C3214FFA8E004CB108 /* WeekView.swift */,
 				35A199C521500145004CB108 /* CalenderView.swift */,
+				3568B0C621689391006D0218 /* CalenderCell.swift */,
 				3542DD64215CDAF100867598 /* TabbarViewController.swift */,
 			);
 			path = View;
@@ -290,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				35A199CA21502604004CB108 /* Notification.swift */,
+				3568B0C42168936F006D0218 /* CalenderHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -439,6 +445,7 @@
 				3516423C2152C17700A339EC /* ExpireView.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
 				35A199C621500145004CB108 /* CalenderView.swift in Sources */,
+				3568B0C721689391006D0218 /* CalenderCell.swift in Sources */,
 				3542DD69215CEC5600867598 /* SettingView.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
@@ -458,6 +465,7 @@
 				35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */,
 				356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */,
 				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
+				3568B0C52168936F006D0218 /* CalenderHelper.swift in Sources */,
 				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
 				350547ED214A6160005B7531 /* LogViewController.swift in Sources */,
 			);
@@ -607,7 +615,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -623,7 +634,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
