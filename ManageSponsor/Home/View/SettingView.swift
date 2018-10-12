@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Toaster
 
 extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
     
@@ -23,4 +24,12 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
     
+}
+
+extension SettingViewController {
+    
+    func switchChanged(text : String) {
+        Toast(text: "푸시 알림을 \(text)하셨습니다.").show()
+
+    }
 }

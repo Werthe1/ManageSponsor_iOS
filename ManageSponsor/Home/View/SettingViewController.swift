@@ -18,5 +18,13 @@ class SettingViewController: UIViewController {
         tableView.delegate = self
 
     }
-
+    
+    @IBAction func switchChanged(_ sender: UISwitch) {
+        if sender.isOn {
+            switchChanged(text: "설정")
+        }else {
+            switchChanged(text : "해제")
+        }
+    }
+    
 }

@@ -430,6 +430,9 @@
                                                     <rect key="frame" x="310" y="16" width="51" height="40.5"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <color key="onTintColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <connections>
+                                                        <action selector="switchChanged:" destination="RK0-rb-zOU" eventType="valueChanged" id="bxR-eT-aw6"/>
+                                                    </connections>
                                                 </switch>
                                             </subviews>
                                             <constraints>
