@@ -7,12 +7,24 @@
 //
 
 import UIKit
+import Lottie
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
+        
+        
+        let animation = LOTAnimationView.init(name: "cal")
+        
+        animation.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
+        animation.contentMode = .scaleAspectFit
+        animation.loopAnimation = true
+        animation.animationProgress = 0.5
+        self.view.addSubview(animation)
+        animation.play()
+        
     }
 
     @objc func loginButtonPressed() {

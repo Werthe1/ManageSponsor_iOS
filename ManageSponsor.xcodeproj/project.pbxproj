@@ -17,6 +17,8 @@
 		350547F5214A7007005B7531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 350547F4214A7007005B7531 /* Assets.xcassets */; };
 		350547F7214A74C4005B7531 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 350547F6214A74C4005B7531 /* WriteViewController.swift */; };
 		3516423C2152C17700A339EC /* ExpireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516423B2152C17700A339EC /* ExpireView.swift */; };
+		353ADF442170B47000BCFDEB /* cal.json in Resources */ = {isa = PBXBuildFile; fileRef = 353ADF432170B47000BCFDEB /* cal.json */; };
+		353ADF462170B49F00BCFDEB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF452170B49F00BCFDEB /* LaunchViewController.swift */; };
 		3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD64215CDAF100867598 /* TabbarViewController.swift */; };
 		3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD66215CDDA600867598 /* SettingViewController.swift */; };
 		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
@@ -57,6 +59,8 @@
 		350547F4214A7007005B7531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../../.Trash/Assets.xcassets; sourceTree = "<group>"; };
 		350547F6214A74C4005B7531 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		3516423B2152C17700A339EC /* ExpireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireView.swift; sourceTree = "<group>"; };
+		353ADF432170B47000BCFDEB /* cal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cal.json; sourceTree = "<group>"; };
+		353ADF452170B49F00BCFDEB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		3542DD64215CDAF100867598 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		3542DD66215CDDA600867598 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -127,6 +131,7 @@
 		350547D7214A50B2005B7531 /* ManageSponsor */ = {
 			isa = PBXGroup;
 			children = (
+				353ADF432170B47000BCFDEB /* cal.json */,
 				35A199C9215025F4004CB108 /* Helper */,
 				35A199AF214FE4A4004CB108 /* Login */,
 				35A199AE214FE483004CB108 /* Log */,
@@ -136,6 +141,7 @@
 				350547DC214A50B2005B7531 /* Main.storyboard */,
 				350547E1214A50B5005B7531 /* LaunchScreen.storyboard */,
 				350547E4214A50B5005B7531 /* Info.plist */,
+				353ADF452170B49F00BCFDEB /* LaunchViewController.swift */,
 			);
 			path = ManageSponsor;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				353ADF442170B47000BCFDEB /* cal.json in Resources */,
 				350547E3214A50B5005B7531 /* LaunchScreen.storyboard in Resources */,
 				350547F5214A7007005B7531 /* Assets.xcassets in Resources */,
 				350547DE214A50B2005B7531 /* Main.storyboard in Resources */,
@@ -463,6 +470,7 @@
 				355B21F821556B8700D9270F /* LogViewModel.swift in Sources */,
 				355B21F62155695600D9270F /* LoginModel.swift in Sources */,
 				35A199CB21502604004CB108 /* Notification.swift in Sources */,
+				353ADF462170B49F00BCFDEB /* LaunchViewController.swift in Sources */,
 				356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */,
 				35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */,
 				356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */,
@@ -617,7 +625,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -633,7 +644,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
