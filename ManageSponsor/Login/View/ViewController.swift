@@ -14,17 +14,6 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
-        
-        let animation = LOTAnimationView.init(name: "cal")
-        
-        animation.frame = CGRect(x: 100, y: 100, width: 100, height: 100)
-        animation.contentMode = .scaleAspectFit
-        animation.loopAnimation = true
-        animation.animationProgress = 0.5
-        self.view.addSubview(animation)
-        animation.play()
-        
     }
 
     @objc func loginButtonPressed() {
@@ -34,7 +23,17 @@ class ViewController: UIViewController {
     }
     
     func setupViews() {
-        self.view.addSubview(idTextField)
+        
+        let animation = LOTAnimationView.init(name: "cal")
+        
+        animation.frame = CGRect(x: (view.frame.midX - 150), y: 50, width: 300, height: 150)
+        animation.contentMode = .scaleAspectFit
+        animation.loopAnimation = true
+        animation.animationProgress = 0.5
+        self.view.addSubview(animation)
+        animation.play()
+        
+//        self.view.addSubview(idTextField)
 //        idTextField.topAnchor.constraint(equalTo: topAnchor).isActive=true
 //        idTextField.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
 //        idTextField.rightAnchor.constraint(equalTo: rightAnchor).isActive=true

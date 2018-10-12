@@ -19,6 +19,7 @@
 		3516423C2152C17700A339EC /* ExpireView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3516423B2152C17700A339EC /* ExpireView.swift */; };
 		353ADF442170B47000BCFDEB /* cal.json in Resources */ = {isa = PBXBuildFile; fileRef = 353ADF432170B47000BCFDEB /* cal.json */; };
 		353ADF462170B49F00BCFDEB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF452170B49F00BCFDEB /* LaunchViewController.swift */; };
+		353ADF4A21710D3100BCFDEB /* TabbarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */; };
 		3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD64215CDAF100867598 /* TabbarViewController.swift */; };
 		3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD66215CDDA600867598 /* SettingViewController.swift */; };
 		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
@@ -61,6 +62,7 @@
 		3516423B2152C17700A339EC /* ExpireView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireView.swift; sourceTree = "<group>"; };
 		353ADF432170B47000BCFDEB /* cal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cal.json; sourceTree = "<group>"; };
 		353ADF452170B49F00BCFDEB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
+		353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarAnimation.swift; sourceTree = "<group>"; };
 		3542DD64215CDAF100867598 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		3542DD66215CDDA600867598 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -302,6 +304,7 @@
 			children = (
 				35A199CA21502604004CB108 /* Notification.swift */,
 				3568B0C42168936F006D0218 /* CalenderHelper.swift */,
+				353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -475,6 +478,7 @@
 				35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */,
 				356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */,
 				35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */,
+				353ADF4A21710D3100BCFDEB /* TabbarAnimation.swift in Sources */,
 				3568B0C52168936F006D0218 /* CalenderHelper.swift in Sources */,
 				35A199BA214FEA22004CB108 /* HomeModel.swift in Sources */,
 				350547ED214A6160005B7531 /* LogViewController.swift in Sources */,
