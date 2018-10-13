@@ -20,6 +20,7 @@
 		353ADF442170B47000BCFDEB /* cal.json in Resources */ = {isa = PBXBuildFile; fileRef = 353ADF432170B47000BCFDEB /* cal.json */; };
 		353ADF462170B49F00BCFDEB /* LaunchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF452170B49F00BCFDEB /* LaunchViewController.swift */; };
 		353ADF4A21710D3100BCFDEB /* TabbarAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */; };
+		353ADF4C21711CB100BCFDEB /* NavigationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 353ADF4B21711CB100BCFDEB /* NavigationHelper.swift */; };
 		3542DD65215CDAF100867598 /* TabbarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD64215CDAF100867598 /* TabbarViewController.swift */; };
 		3542DD67215CDDA600867598 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD66215CDDA600867598 /* SettingViewController.swift */; };
 		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
@@ -63,6 +64,7 @@
 		353ADF432170B47000BCFDEB /* cal.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = cal.json; sourceTree = "<group>"; };
 		353ADF452170B49F00BCFDEB /* LaunchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchViewController.swift; sourceTree = "<group>"; };
 		353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarAnimation.swift; sourceTree = "<group>"; };
+		353ADF4B21711CB100BCFDEB /* NavigationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationHelper.swift; sourceTree = "<group>"; };
 		3542DD64215CDAF100867598 /* TabbarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabbarViewController.swift; sourceTree = "<group>"; };
 		3542DD66215CDDA600867598 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -305,6 +307,7 @@
 				35A199CA21502604004CB108 /* Notification.swift */,
 				3568B0C42168936F006D0218 /* CalenderHelper.swift */,
 				353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */,
+				353ADF4B21711CB100BCFDEB /* NavigationHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				3516423C2152C17700A339EC /* ExpireView.swift in Sources */,
 				35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */,
 				35A199C621500145004CB108 /* CalenderView.swift in Sources */,
+				353ADF4C21711CB100BCFDEB /* NavigationHelper.swift in Sources */,
 				3568B0C721689391006D0218 /* CalenderCell.swift in Sources */,
 				3542DD69215CEC5600867598 /* SettingView.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
@@ -631,7 +635,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -647,7 +654,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

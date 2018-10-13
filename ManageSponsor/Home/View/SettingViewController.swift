@@ -20,9 +20,11 @@ class SettingViewController: UIViewController {
     }
     
     @IBAction func switchChanged(_ sender: UISwitch) {
+        UserDefaults.standard.set(sender.isOn, forKey: "SwitchState")
+
         if sender.isOn {
             switchChanged(text: "설정")
-        }else {
+        } else {
             switchChanged(text : "해제")
         }
     }
