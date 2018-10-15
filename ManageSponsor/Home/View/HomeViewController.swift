@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class HomeViewController: UIViewController {
 
@@ -20,6 +21,30 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         defaultPage()
         defaultNavi()
+        
+        let url = URL(string: "http://hyerios.tistory.com/")
+
+        let task = URLSession.shared.dataTask(with: url!){(data, response, error) in
+            if error != nil {
+                print(error)
+            }else{
+                let content = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
+                print(content)
+            }
+        }
+        task.resume()
+        
+//        Alamofire.request(url){ response in
+//            switch response.result {
+//            case .success:
+//                completion(json)
+//                break
+//            case .failure:
+//                print("fail")
+//                break
+//            }
+//        }
+       
     }
 
     @IBAction func writeButtonPressed(_ sender: Any) {

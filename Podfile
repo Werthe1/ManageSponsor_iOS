@@ -8,6 +8,8 @@ target 'ManageSponsor' do
    	 pod 'Alamofire', '~> 4.7'
 	 pod 'lottie-ios'
 	 pod 'Toaster'
+	 pod 'SwiftSoup'
+
 
   # Pods for ManageSponsor
 
