@@ -44,6 +44,9 @@
 		35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */; };
 		35A199CB21502604004CB108 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199CA21502604004CB108 /* Notification.swift */; };
 		35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9DA592166023700DE8329 /* HomeViewModel.swift */; };
+		35AC2D1F2177666E0033C685 /* KoPub Dotum Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35AC2D1E217766520033C685 /* KoPub Dotum Bold.ttf */; };
+		35AC2D20217766720033C685 /* KoPub Dotum Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35AC2D1C217766510033C685 /* KoPub Dotum Light.ttf */; };
+		35AC2D21217766750033C685 /* KoPub Dotum Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35AC2D1D217766510033C685 /* KoPub Dotum Medium.ttf */; };
 		DFF521ECD3F86E5ABA51AB2A /* Pods_ManageSponsor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70AA74E595F84B7CB15EB800 /* Pods_ManageSponsor.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +91,9 @@
 		35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCalenderViewController.swift; sourceTree = "<group>"; };
 		35A199CA21502604004CB108 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		35A9DA592166023700DE8329 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		35AC2D1C217766510033C685 /* KoPub Dotum Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPub Dotum Light.ttf"; sourceTree = "<group>"; };
+		35AC2D1D217766510033C685 /* KoPub Dotum Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPub Dotum Medium.ttf"; sourceTree = "<group>"; };
+		35AC2D1E217766520033C685 /* KoPub Dotum Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPub Dotum Bold.ttf"; sourceTree = "<group>"; };
 		5685E738A477F99768FA42D4 /* Pods-ManageSponsor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ManageSponsor.debug.xcconfig"; path = "Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor.debug.xcconfig"; sourceTree = "<group>"; };
 		70AA74E595F84B7CB15EB800 /* Pods_ManageSponsor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ManageSponsor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -304,6 +310,9 @@
 		35A199C9215025F4004CB108 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				35AC2D1E217766520033C685 /* KoPub Dotum Bold.ttf */,
+				35AC2D1C217766510033C685 /* KoPub Dotum Light.ttf */,
+				35AC2D1D217766510033C685 /* KoPub Dotum Medium.ttf */,
 				35A199CA21502604004CB108 /* Notification.swift */,
 				3568B0C42168936F006D0218 /* CalenderHelper.swift */,
 				353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */,
@@ -382,8 +391,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				353ADF442170B47000BCFDEB /* cal.json in Resources */,
+				35AC2D20217766720033C685 /* KoPub Dotum Light.ttf in Resources */,
+				35AC2D21217766750033C685 /* KoPub Dotum Medium.ttf in Resources */,
 				350547E3214A50B5005B7531 /* LaunchScreen.storyboard in Resources */,
 				350547F5214A7007005B7531 /* Assets.xcassets in Resources */,
+				35AC2D1F2177666E0033C685 /* KoPub Dotum Bold.ttf in Resources */,
 				350547DE214A50B2005B7531 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
