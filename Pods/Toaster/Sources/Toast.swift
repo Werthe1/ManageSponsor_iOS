@@ -129,7 +129,7 @@ open class Toast: Operation {
             completion: { completed in
               self.finish()
               UIView.animate(
-                withDuration: 0.5,
+                withDuration: 0.3,
                 animations: {
                   self.view.alpha = 0
                 },
