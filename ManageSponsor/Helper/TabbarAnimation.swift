@@ -16,6 +16,7 @@ class TabbarAnimation : NSObject, UITabBarControllerDelegate {
 }
 
 class SlideAnimation : NSObject, UIViewControllerAnimatedTransitioning {
+    
     weak var transition : UIViewControllerContextTransitioning?
     var tabBar : UITabBarController!
     var index = 0

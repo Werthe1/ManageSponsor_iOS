@@ -16,12 +16,14 @@ extension HomeViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.tableFooterView = UIView.init(frame: .zero)
         
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
         floatingButton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
         floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         
+        addRefresh()
     }
     
     func defaultNavi() {

@@ -18,7 +18,6 @@ extension UIViewController {
     
 }
 
-
 class NavigationSetting: UINavigationController {
     func naviDefault() {
         self.navigationController?.navigationBar.setBackgroundImage(nil, for: .default)

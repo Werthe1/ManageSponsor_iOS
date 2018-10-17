@@ -14,6 +14,11 @@ class TabbarViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        tabBar.backgroundColor = UIColor.clear
+        tabBar.backgroundImage = UIImage()
+        tabBar.shadowImage = UIImage()
+        
         selectedIndex = defaultIndex
         let rightBarButtonItem = UIBarButtonItem.init(image: UIImage(named: "setting"), style: .done, target: self, action: #selector(TabbarViewController.setting))
         

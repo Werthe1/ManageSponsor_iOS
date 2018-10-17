@@ -10,11 +10,13 @@ import UIKit
 
 class HomeModel {
     
-    var log : String
+    var name : String
+    var content : String
     var date : String
     
-    init(log: String, date: String) {
-        self.log = log
+    init(name: String, content: String ,date: String) {
+        self.name = name
+        self.content = content
         self.date = date
     }
 }
