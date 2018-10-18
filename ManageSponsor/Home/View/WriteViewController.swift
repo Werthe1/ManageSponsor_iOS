@@ -10,7 +10,6 @@ import UIKit
 
 class WriteViewController: UIViewController {
 
-    var theme = MyTheme.dark
     let calender = Notification.Name(rawValue: calenderClicked)
     
     @IBOutlet weak var dateLabel: UILabel!

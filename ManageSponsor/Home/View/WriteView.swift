@@ -16,7 +16,7 @@ enum MyTheme {
 
 extension WriteViewController {
     func defaultPage() {
-        self.navigationItem.title = "글쓰기"
+
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.darkGray.cgColor
         textView.layer.cornerRadius = 5
@@ -39,16 +39,17 @@ extension WriteViewController {
     }
     
     @objc func calenderSelect(notification: NSNotification){
-        self.dateLabel.text = notification.userInfo!["date"] as! String
-        print(notification)
+        if let date : String = notification.userInfo!["date"] as! String{
+            self.dateLabel.text = date
+        }
+
     }
     
     @objc func pressedButton(){
         let uv = self.storyboard?.instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
         uv.modalPresentationStyle = .overCurrentContext
         self.present(uv, animated: false, completion: nil)
-        
-//        self.navigationController?.pushViewController(uv, animated: true)
+    
     }
     
     @objc func doneButton() {

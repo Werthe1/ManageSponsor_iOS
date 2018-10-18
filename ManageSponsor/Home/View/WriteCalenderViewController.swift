@@ -11,12 +11,13 @@ import UIKit
 class WriteCalenderViewController: UIViewController {
 
     @IBOutlet weak var constraintX: NSLayoutConstraint!
+    @IBOutlet weak var constraintY: NSLayoutConstraint!
     @IBOutlet weak var calView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        constraintX.constant = -500
+        constraintY.constant = 1000
 
         self.title = "My Calender"
         self.navigationController?.navigationBar.isTranslucent=false
@@ -33,9 +34,9 @@ class WriteCalenderViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
-        constraintX.constant = 0
+        constraintY.constant = 0
         
-        UIView.animate(withDuration: 0.5, animations: {
+        UIView.animate(withDuration: 3, animations: {
             self.view.layoutIfNeeded()
         })
     }
