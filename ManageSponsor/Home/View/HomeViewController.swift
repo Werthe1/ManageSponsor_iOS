@@ -15,8 +15,8 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var floatingButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
     
-    var array1 = ["성공회대 총장 취임식", "후원자의 밤", "후원인 달력 발송","소식지 발송"]
-    var array2 = ["2018.10.09 / 김혜리 ", "2019-01-10", "2018-12-01", "2018-11-17"]
+    var array1 = ["2019-01-10", "후원자의 밤", "후원인 달력 발송","소식지 발송"]
+    var array2 = ["김혜리 ", "2019-01-10", "2018-12-01", "2018-11-17"]
     var refresh : UIRefreshControl?
     
     override func viewDidLoad() {

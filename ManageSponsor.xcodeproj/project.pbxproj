@@ -43,6 +43,7 @@
 		35A199C621500145004CB108 /* CalenderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C521500145004CB108 /* CalenderView.swift */; };
 		35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */; };
 		35A199CB21502604004CB108 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199CA21502604004CB108 /* Notification.swift */; };
+		35A8F51621788E8300AFE8DD /* LogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A8F51521788E8300AFE8DD /* LogTableViewCell.swift */; };
 		35A9DA5A2166023700DE8329 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A9DA592166023700DE8329 /* HomeViewModel.swift */; };
 		35AC2D1F2177666E0033C685 /* KoPub Dotum Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35AC2D1E217766520033C685 /* KoPub Dotum Bold.ttf */; };
 		35AC2D20217766720033C685 /* KoPub Dotum Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 35AC2D1C217766510033C685 /* KoPub Dotum Light.ttf */; };
@@ -90,6 +91,7 @@
 		35A199C521500145004CB108 /* CalenderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderView.swift; sourceTree = "<group>"; };
 		35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteCalenderViewController.swift; sourceTree = "<group>"; };
 		35A199CA21502604004CB108 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		35A8F51521788E8300AFE8DD /* LogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogTableViewCell.swift; sourceTree = "<group>"; };
 		35A9DA592166023700DE8329 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		35AC2D1C217766510033C685 /* KoPub Dotum Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPub Dotum Light.ttf"; sourceTree = "<group>"; };
 		35AC2D1D217766510033C685 /* KoPub Dotum Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "KoPub Dotum Medium.ttf"; sourceTree = "<group>"; };
@@ -287,6 +289,7 @@
 			isa = PBXGroup;
 			children = (
 				350547EC214A6160005B7531 /* LogViewController.swift */,
+				35A8F51521788E8300AFE8DD /* LogTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -469,6 +472,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35A8F51621788E8300AFE8DD /* LogTableViewCell.swift in Sources */,
 				35A199C4214FFA8E004CB108 /* WeekView.swift in Sources */,
 				3542DD6D215D01BD00867598 /* ExpireDetailViewController.swift in Sources */,
 				35A199C2214FEE62004CB108 /* MonthView.swift in Sources */,

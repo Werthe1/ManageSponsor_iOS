@@ -40,6 +40,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeTableViewCell
+        cell.outView.clipsToBounds = true
+        cell.outView.layer.cornerRadius = 10
         cell.titleLabel.text = array1[indexPath.row]
         cell.dateLabel.text = array2[indexPath.row]
         return cell
