@@ -57,6 +57,7 @@ class MonthView : UIView {
         labelName.widthAnchor.constraint(equalToConstant: 150).isActive = true
         labelName.heightAnchor.constraint(equalTo: heightAnchor).isActive = true
         labelName.text = "\(arrayMonth[currentMonthIndex]) \(currentYear)"
+
         
         self.addSubview(rightButton)
         rightButton.topAnchor.constraint(equalTo: topAnchor).isActive = true
@@ -76,14 +77,14 @@ class MonthView : UIView {
         let label = UILabel()
         label.textColor = UIColor.black
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont(name: "KoPubDotumBold", size: 17)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let rightButton: UIButton = {
        let button = UIButton()
-        button.setTitle(">", for: .normal)
+        button.setTitle("->", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)
@@ -92,7 +93,7 @@ class MonthView : UIView {
     
     let leftButton: UIButton = {
         let button = UIButton()
-        button.setTitle("<", for: .normal)
+        button.setTitle("<-", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)

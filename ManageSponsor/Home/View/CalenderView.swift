@@ -84,7 +84,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         monthView.topAnchor.constraint(equalTo: topAnchor).isActive=true
         monthView.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
         monthView.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
-        monthView.heightAnchor.constraint(equalToConstant: 35).isActive=true
+        monthView.heightAnchor.constraint(equalToConstant: 30).isActive=true
         monthView.delegate=self
         
         addSubview(weekdaysView)
@@ -161,6 +161,7 @@ extension CalenderView {
         lbl.textColor=UIColor.black
         let calender = Notification.Name(rawValue: calenderClicked)
         NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":" \(currentYear) \(currentMonthIndex) \(indexPath.row-firstWeekDayOfMonth+2)"])
+        
         
     }
     

@@ -47,5 +47,9 @@ class ViewController: UIViewController {
         logoImage.layer.cornerRadius = 20
     }
     
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
+        self.view.endEditing(true)
+    }
+    
 }
 
