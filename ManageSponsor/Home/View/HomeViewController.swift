@@ -24,33 +24,6 @@ class HomeViewController: UIViewController {
         defaultPage()
         defaultNavi()
         
-        let url = URL(string: "http://hyerios.tistory.com/")
-
-        let task = URLSession.shared.dataTask(with: url!){(data, response, error) in
-            if error != nil {
-                print(error)
-            } else {
-                let content = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
-                do {
-                    try GetData(content)
-                } catch {
-                    
-                }
-            }
-        }
-        task.resume()
-        
-//        Alamofire.request(url){ response in
-//            switch response.result {
-//            case .success:
-//                completion(json)
-//                break
-//            case .failure:
-//                print("fail")
-//                break
-//            }
-//        }
-       
     }
 
     @IBAction func writeButtonPressed(_ sender: Any) {
@@ -58,45 +31,4 @@ class HomeViewController: UIViewController {
         self.navigationController?.pushViewController(write, animated: false)
     }
     
-    func addRefresh() {
-        refresh = UIRefreshControl()
-        refresh?.tintColor = UIColor.black
-        refresh?.addTarget(self, action: #selector(refreshAgain), for: .valueChanged)
-        if let refresh = refresh {
-            tableView.addSubview(refresh)
-        }
-    }
-    
-    @objc func refreshAgain() {
-        refresh?.endRefreshing()
-        tableView.reloadData()
-    }
-}
-
-
-struct GetData {
-    
-    init(_ innerHTML: Any) throws {
-        let htmlString = innerHTML as? String
-        
-        let doc = try SwiftSoup.parse(htmlString!)
-        let title = try doc.getElementsByClass("tit_post").array()
-        let desc = try doc.getElementsByClass("txt_post").array()
-        
-//        for i in 0..<titles.count {
-//            let title = try authors[i].text()
-//            let desc = try titles[i].text()
-//
-//            print(author)
-//            print(title)
-//            let email = Email(author: author , title: title)
-//            emails.append(email)
-//        }
-//        self.emails = emails
-    }
-}
-
-struct GettingData {
-    let title: String
-    let desc: String
 }

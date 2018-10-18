@@ -98,32 +98,32 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.08.08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZB-NO-ZSn">
-                                                    <rect key="frame" x="16" y="8" width="87" height="19"/>
-                                                    <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
+                                                    <rect key="frame" x="16" y="8" width="77" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                                     <color key="textColor" red="0.14901960784313725" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-SH-Mse">
-                                                    <rect key="frame" x="16" y="35" width="318" height="69.5"/>
+                                                    <rect key="frame" x="16" y="32.5" width="318" height="62.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김정호 고문님 CEO 장학금 요청 - 김태윤 학생 복학 확인했음. 지원 김태윤 학생에게 계속하는지 여부 확인할 것." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJc-8B-3wO">
-                                                            <rect key="frame" x="8" y="8" width="302" height="49.5"/>
-                                                            <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <rect key="frame" x="8" y="8" width="302" height="46.5"/>
+                                                            <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="14"/>
+                                                            <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
-                                                    <color key="backgroundColor" red="0.85146335659898476" green="0.85146335659898476" blue="0.85146335659898476" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <color key="backgroundColor" red="0.95552427030456855" green="0.95552427030456855" blue="0.95552427030456855" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <constraints>
                                                         <constraint firstItem="MJc-8B-3wO" firstAttribute="top" secondItem="vSH-SH-Mse" secondAttribute="top" constant="8" id="6IT-2c-m9H"/>
-                                                        <constraint firstAttribute="bottom" secondItem="MJc-8B-3wO" secondAttribute="bottom" constant="12" id="MjT-9q-5qk"/>
+                                                        <constraint firstAttribute="bottom" secondItem="MJc-8B-3wO" secondAttribute="bottom" constant="8" id="MjT-9q-5qk"/>
                                                         <constraint firstAttribute="trailing" secondItem="MJc-8B-3wO" secondAttribute="trailing" constant="8" id="Qxj-oL-yr9"/>
                                                         <constraint firstItem="MJc-8B-3wO" firstAttribute="leading" secondItem="vSH-SH-Mse" secondAttribute="leading" constant="8" id="soS-KS-2KH"/>
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김혜리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-wt-hC0">
-                                                    <rect key="frame" x="297" y="8" width="37" height="15.5"/>
-                                                    <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="14"/>
+                                                    <rect key="frame" x="294.5" y="8" width="39.5" height="16.5"/>
+                                                    <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                                     <color key="textColor" red="0.3411764706" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -149,7 +149,7 @@
                                 </prototypes>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8aL-pe-ora">
-                                <rect key="frame" x="314" y="557" width="45" height="45"/>
+                                <rect key="frame" x="314" y="556.5" width="45" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.60784313729999995" green="0.62352941179999999" blue="0.6588235294" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" image="write">
@@ -159,18 +159,23 @@
                                     <action selector="writeButtonPressed:" destination="N6b-Dg-eZa" eventType="touchUpInside" id="Pzt-xe-qUM"/>
                                 </connections>
                             </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-08-kC6">
-                                <rect key="frame" x="0.0" y="617" width="375" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZCF-08-kC6">
+                                <rect key="frame" x="0.0" y="616.5" width="375" height="1.5"/>
                                 <color key="backgroundColor" red="0.20784313725490194" green="0.36078431372549019" blue="0.49019607843137253" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="fAz-Pq-utM"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="ZCF-08-kC6" firstAttribute="leading" secondItem="5pO-Ks-24F" secondAttribute="leading" id="6GL-9A-dTb"/>
                             <constraint firstItem="UEd-nG-ZgJ" firstAttribute="top" secondItem="fbP-XR-xOK" secondAttribute="top" id="GBt-Oi-r62"/>
                             <constraint firstItem="UEd-nG-ZgJ" firstAttribute="leading" secondItem="fbP-XR-xOK" secondAttribute="leading" id="NA6-9T-zCv"/>
+                            <constraint firstItem="fbP-XR-xOK" firstAttribute="bottom" secondItem="ZCF-08-kC6" secondAttribute="bottom" id="S6u-2d-Ce7"/>
                             <constraint firstItem="fbP-XR-xOK" firstAttribute="trailing" secondItem="UEd-nG-ZgJ" secondAttribute="trailing" id="Zgu-fU-lsX"/>
                             <constraint firstItem="fbP-XR-xOK" firstAttribute="bottom" secondItem="UEd-nG-ZgJ" secondAttribute="bottom" id="oT8-KT-W87"/>
+                            <constraint firstAttribute="trailing" secondItem="ZCF-08-kC6" secondAttribute="trailing" id="zIO-xB-uwP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fbP-XR-xOK"/>
                     </view>
@@ -552,7 +557,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성공회대 발전기금 소프트웨어공학과" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IM1-dQ-ZYD">
-                                                    <rect key="frame" x="16" y="43" width="351" height="16.5"/>
+                                                    <rect key="frame" x="16" y="39" width="351" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                                     <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -564,22 +569,22 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약정번호 : 23429080980" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aO5-cO-myO">
-                                                    <rect key="frame" x="16" y="67.5" width="351" height="16"/>
+                                                    <rect key="frame" x="16" y="63.5" width="351" height="16"/>
                                                     <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="14"/>
                                                     <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.08.08" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="28i-vA-4AN">
-                                                    <rect key="frame" x="16" y="91.5" width="351" height="16"/>
+                                                    <rect key="frame" x="16" y="87.5" width="351" height="16"/>
                                                     <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="14"/>
-                                                    <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.3411764706" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="aO5-cO-myO" firstAttribute="leading" secondItem="xgB-ba-5tA" secondAttribute="leading" constant="16" id="2bD-X3-wxu"/>
                                                 <constraint firstItem="28i-vA-4AN" firstAttribute="top" secondItem="aO5-cO-myO" secondAttribute="bottom" constant="8" id="2sm-ws-p6n"/>
-                                                <constraint firstItem="IM1-dQ-ZYD" firstAttribute="top" secondItem="WjZ-Gb-uEZ" secondAttribute="bottom" constant="16" id="4Wv-zi-ftF"/>
+                                                <constraint firstItem="IM1-dQ-ZYD" firstAttribute="top" secondItem="WjZ-Gb-uEZ" secondAttribute="bottom" constant="12" id="4Wv-zi-ftF"/>
                                                 <constraint firstItem="IM1-dQ-ZYD" firstAttribute="leading" secondItem="xgB-ba-5tA" secondAttribute="leading" constant="16" id="4ln-gm-Cni"/>
                                                 <constraint firstItem="WjZ-Gb-uEZ" firstAttribute="leading" secondItem="xgB-ba-5tA" secondAttribute="leading" constant="16" id="GoM-yj-hCE"/>
                                                 <constraint firstItem="aO5-cO-myO" firstAttribute="top" secondItem="IM1-dQ-ZYD" secondAttribute="bottom" constant="8" id="J9L-sn-Wlq"/>
@@ -603,16 +608,21 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-bv-nqd">
-                                <rect key="frame" x="0.0" y="617" width="375" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8a0-bv-nqd">
+                                <rect key="frame" x="0.0" y="616.5" width="375" height="1.5"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.36078431370000003" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="Cn7-JR-x4d"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="8a0-bv-nqd" secondAttribute="trailing" id="Anj-LR-scG"/>
                             <constraint firstAttribute="trailing" secondItem="2Sn-y3-IvI" secondAttribute="trailing" id="GwM-cp-uqz"/>
+                            <constraint firstItem="8a0-bv-nqd" firstAttribute="leading" secondItem="tGW-RA-erD" secondAttribute="leading" id="Jld-D0-oKy"/>
                             <constraint firstItem="2Sn-y3-IvI" firstAttribute="top" secondItem="DnB-Qq-IqQ" secondAttribute="top" id="LKf-sA-waC"/>
+                            <constraint firstItem="8a0-bv-nqd" firstAttribute="bottom" secondItem="DnB-Qq-IqQ" secondAttribute="bottom" id="bJ4-tQ-twb"/>
                             <constraint firstItem="2Sn-y3-IvI" firstAttribute="leading" secondItem="DnB-Qq-IqQ" secondAttribute="leading" id="dUJ-B4-H6O"/>
                             <constraint firstItem="DnB-Qq-IqQ" firstAttribute="bottom" secondItem="2Sn-y3-IvI" secondAttribute="bottom" id="prU-yV-K3m"/>
                         </constraints>
@@ -690,22 +700,28 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="dateLabel" destination="rJa-8L-vEe" id="C1e-uP-CDd"/>
+                                            <outlet property="dueLabel" destination="sph-hp-30U" id="aEB-bI-uqZ"/>
                                             <outlet property="nameLabel" destination="zIw-Ck-IZc" id="bdv-DX-Rlv"/>
                                             <outlet property="purposeLabel" destination="EQr-0L-9Om" id="yka-AW-t02"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TYT-Ow-hpE">
-                                <rect key="frame" x="0.0" y="617" width="375" height="1.5"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TYT-Ow-hpE">
+                                <rect key="frame" x="0.0" y="616.5" width="375" height="1.5"/>
                                 <color key="backgroundColor" red="0.20784313730000001" green="0.36078431370000003" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1.5" id="Hs0-Fm-JQf"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="TYT-Ow-hpE" firstAttribute="bottom" secondItem="RrX-yU-51f" secondAttribute="bottom" id="4Tx-uD-hox"/>
                             <constraint firstAttribute="trailing" secondItem="zWw-KO-hXE" secondAttribute="trailing" id="6zc-p3-sQB"/>
+                            <constraint firstItem="TYT-Ow-hpE" firstAttribute="leading" secondItem="8TE-Oz-8Ll" secondAttribute="leading" id="BNG-2P-X0W"/>
                             <constraint firstItem="zWw-KO-hXE" firstAttribute="top" secondItem="RrX-yU-51f" secondAttribute="top" id="LvU-4a-YW4"/>
+                            <constraint firstAttribute="trailing" secondItem="TYT-Ow-hpE" secondAttribute="trailing" id="Ppu-cu-LKi"/>
                             <constraint firstItem="RrX-yU-51f" firstAttribute="bottom" secondItem="zWw-KO-hXE" secondAttribute="bottom" id="cYx-od-KgT"/>
                             <constraint firstItem="zWw-KO-hXE" firstAttribute="leading" secondItem="RrX-yU-51f" secondAttribute="leading" id="dpl-d0-chj"/>
                         </constraints>

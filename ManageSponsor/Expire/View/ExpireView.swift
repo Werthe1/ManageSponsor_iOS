@@ -15,7 +15,7 @@ extension ExpireViewController {
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
-        
+        addRefresh()
     }
     
 }
@@ -28,6 +28,10 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
         cell.nameLabel.text = array1[indexPath.row]
         cell.purposeLabel.text = array2[indexPath.row]
         cell.dateLabel.text = array3[indexPath.row]
+        
+        cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 16)
+        cell.dueLabel.font = UIFont(name: "KoPubDotumBold", size: 14)
+
         return cell
     }
     
@@ -45,4 +49,23 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
         self.navigationController?.pushViewController(nv, animated: true)
     }
 
+}
+
+extension ExpireViewController : RefreshPro {
+    
+    func addRefresh() {
+        refresh = UIRefreshControl()
+        refresh?.tintColor = UIColor.black
+        refresh?.addTarget(self, action: #selector(refreshAgain), for: .valueChanged)
+        
+        if let refresh = refresh {
+            tableView.addSubview(refresh)
+        }
+    }
+    
+    @objc func refreshAgain() {
+        refresh?.endRefreshing()
+        tableView.reloadData()
+    }
+    
 }

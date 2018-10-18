@@ -20,8 +20,8 @@ extension HomeViewController {
         
         floatingButton.clipsToBounds = true
         floatingButton.layer.cornerRadius = floatingButton.frame.width/2
-        floatingButton.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
-        floatingButton.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+
+        floatingButton.frame = CGRect(x: self.view.frame.width - 61, y: self.view.frame.height - (self.view.frame.height - self.tableView.frame.height), width: 45, height: 45)
         
         addRefresh()
     }
@@ -43,6 +43,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         cell.outView.clipsToBounds = true
         cell.outView.layer.cornerRadius = 10
         cell.titleLabel.text = array1[indexPath.row]
+        cell.titleLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
+
         cell.dateLabel.text = array2[indexPath.row]
         return cell
     }
@@ -54,4 +56,23 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+}
+
+extension HomeViewController : RefreshPro {
+    
+    func addRefresh() {
+        refresh = UIRefreshControl()
+        refresh?.tintColor = UIColor.black
+        refresh?.addTarget(self, action: #selector(refreshAgain), for: .valueChanged)
+        
+        if let refresh = refresh {
+            tableView.addSubview(refresh)
+        }
+    }
+    
+    @objc func refreshAgain() {
+        refresh?.endRefreshing()
+        tableView.reloadData()
+    }
+    
 }

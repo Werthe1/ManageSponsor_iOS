@@ -13,6 +13,7 @@ class ExpireTableViewCell: UITableViewCell {
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var purposeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var dueLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
