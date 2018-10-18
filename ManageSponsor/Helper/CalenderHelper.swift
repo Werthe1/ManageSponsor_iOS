@@ -44,7 +44,6 @@ struct Style {
     static var weekdaysLblColor = UIColor.white
     
     static func themeDark(){
-        bgColor = Colors.darkGray
         monthViewLblColor = UIColor.white
         monthViewBtnRightColor = UIColor.white
         monthViewBtnLeftColor = UIColor.white

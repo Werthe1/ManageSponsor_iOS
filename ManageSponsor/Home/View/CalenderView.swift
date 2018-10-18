@@ -158,6 +158,7 @@ extension CalenderView {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let cell=collectionView.cellForItem(at: indexPath)
         let lbl = cell?.subviews[1] as! UILabel
+        lbl.backgroundColor = UIColor.red
         lbl.textColor=UIColor.black
         let calender = Notification.Name(rawValue: calenderClicked)
         NotificationCenter.default.post(name: calender, object: nil, userInfo: ["date":" \(currentYear) \(currentMonthIndex) \(indexPath.row-firstWeekDayOfMonth+2)"])
@@ -165,9 +166,16 @@ extension CalenderView {
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let cell=collectionView.cellForItem(at: indexPath)
+        let lbl = cell?.subviews[1] as! UILabel
+        lbl.backgroundColor = UIColor.white
+
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.width/7 - 8
-        let height: CGFloat = 40
+        let height: CGFloat = 20
         return CGSize(width: width, height: height)
     }
     

@@ -39,6 +39,7 @@ extension WriteViewController {
     }
     
     @objc func calenderSelect(notification: NSNotification){
+        self.dateLabel.text = notification.userInfo!["date"] as! String
         print(notification)
     }
     
