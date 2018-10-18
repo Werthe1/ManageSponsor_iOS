@@ -10,19 +10,13 @@ import UIKit
 import Lottie
 
 class ViewController: UIViewController {
-
+    
+    @IBOutlet weak var loginView: UIView!
+    @IBOutlet weak var logoImage: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViews()
-        
-        for family: String in UIFont.familyNames
-        {
-            print(family)
-            for names: String in UIFont.fontNames(forFamilyName: family)
-            {
-                print("== \(names)")
-            }
-        }
         
     }
 
@@ -40,33 +34,18 @@ class ViewController: UIViewController {
         animation.contentMode = .scaleAspectFit
         animation.loopAnimation = true
         animation.animationProgress = 0.5
-        self.view.addSubview(animation)
+//        self.view.addSubview(animation)
         animation.play()
         
-//        self.view.addSubview(idTextField)
-//        idTextField.topAnchor.constraint(equalTo: topAnchor).isActive=true
-//        idTextField.leftAnchor.constraint(equalTo: leftAnchor).isActive=true
-//        idTextField.rightAnchor.constraint(equalTo: rightAnchor).isActive=true
-//        idTextField.bottomAnchor.constraint(equalTo: bottomAnchor).isActive=true
+        
+        loginView.clipsToBounds = true
+        
+        loginView.layer.cornerRadius = 20
+        
+        logoImage.clipsToBounds = true
+        
+        logoImage.layer.cornerRadius = 20
     }
-    
-    let idTextField: UITextField = {
-        let id = UITextField()
-        id.placeholder = "아이디를 입력하세요."
-        id.textAlignment = .center
-        id.font=UIFont.systemFont(ofSize: 16)
-        id.translatesAutoresizingMaskIntoConstraints = false
-        return id
-    }()
-    
-    let passwordTextField: UITextField = {
-        let pw = UITextField()
-        pw.placeholder = "비밀번호를 입력하세요."
-        pw.textAlignment = .center
-        pw.font=UIFont.systemFont(ofSize: 16)
-        pw.translatesAutoresizingMaskIntoConstraints = false
-        return pw
-    }()
     
 }
 
