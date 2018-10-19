@@ -6,11 +6,13 @@
 //  Copyright © 2018년 hyerikim. All rights reserved.
 //
 
+import TransitionButton
 import UIKit
 import Lottie
 
 class ViewController: UIViewController {
     
+    @IBOutlet weak var loginButton: TransitionButton!
     @IBOutlet weak var loginView: UIView!
     @IBOutlet weak var logoImage: UIImageView!
     
@@ -26,14 +28,12 @@ class ViewController: UIViewController {
         self.view.endEditing(true)
     }
     
-    @objc func loginButtonPressed() {
+    @IBAction func loginButtonPressed(_ sender: UIButton) {
         
-        //Alamofire request login, passord
-        
+        loginButton.startAnimation()
         if let st = self.storyboard?.instantiateViewController(withIdentifier: "NV") {
             present(st, animated: true, completion: nil)
         }
-        
     }
     
 }

@@ -39,7 +39,7 @@ class WriteCalenderViewController: UIViewController {
     
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
     
     let calenderView: CalenderView = {

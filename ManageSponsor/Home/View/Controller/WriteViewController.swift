@@ -17,10 +17,11 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var calButton: UIButton!
     @IBOutlet weak var textView: UITextView!
     
+    var placeholderLabel : UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultPage()
-//        defaultNavigation()
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -31,9 +32,14 @@ class WriteViewController: UIViewController {
         NotificationCenter.default.removeObserver(self)
     }
     
+    @IBAction func calendarButtonPressed(_ sender: Any) {
+        let popUp = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
+        popUp.modalPresentationStyle = .overCurrentContext
+        self.present(popUp, animated: false, completion: nil)
+    }
+    
     @IBAction func clearButtonpressed(_ sender: Any) {
-        self.navigationController?.setNavigationBarHidden(false, animated: false)
-        self.dismiss(animated: true, completion: nil)
+        self.dismiss(animated: false, completion: nil)
     }
 
 }

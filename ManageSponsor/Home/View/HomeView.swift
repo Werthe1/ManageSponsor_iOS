@@ -56,7 +56,8 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
-        self.navigationController?.pushViewController(write, animated: false)
+        write.modalPresentationStyle = .overCurrentContext
+        self.present(write, animated: false, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

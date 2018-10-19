@@ -28,11 +28,10 @@ class HomeViewController: UIViewController {
 
     @IBAction func writeButtonPressed(_ sender: Any) {
 
-//        self.navigationController?.setNavigationBarHidden(true, animated: false)
         let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
         write.modalPresentationStyle = .overCurrentContext
         self.present(write, animated: false, completion: nil)
-//        self.navigationController?.pushViewController(write, animated: false)
+
     }
     
 }

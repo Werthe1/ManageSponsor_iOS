@@ -18,8 +18,17 @@ extension WriteViewController {
         
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.darkGray.cgColor
-        textView.layer.cornerRadius = 5
-        calButton.layer.cornerRadius = calButton.frame.width/2
+        textView.delegate = self
+        
+        placeholderLabel = UILabel()
+        placeholderLabel.text = "일정을 등록하세요."        
+        placeholderLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
+        placeholderLabel.sizeToFit()
+        textView.addSubview(placeholderLabel)
+        placeholderLabel.frame.origin = CGPoint(x: 5, y: (textView.font?.pointSize)! / 2)
+        placeholderLabel.textColor = UIColor.lightGray
+        placeholderLabel.isHidden = !textView.text.isEmpty
+        
         createObservers()
     }
     
@@ -29,7 +38,6 @@ extension WriteViewController {
         self.navigationController?.navigationBar.topItem?.title = " "
         self.navigationController?.navigationBar.tintColor = UIColor.black
         let rightBarButtonItem = UIBarButtonItem.init(title: "확인", style: .done, target: self, action: #selector(doneButton))
-        calButton.addTarget(self, action: #selector(pressedButton), for: .touchUpInside)
         self.navigationItem.rightBarButtonItem = rightBarButtonItem
     }
     
@@ -43,17 +51,16 @@ extension WriteViewController {
         }
 
     }
-    
-    @objc func pressedButton(){
-        
-        let popUp = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
-        popUp.modalPresentationStyle = .overCurrentContext
-        self.present(popUp, animated: false, completion: nil)
-    
-    }
-    
+   
     @objc func doneButton() {
         self.navigationController?.popViewController(animated: true)
     }
     
+}
+
+extension WriteViewController : UITextViewDelegate {
+ 
+    func textViewDidChange(_ textView: UITextView) {
+        placeholderLabel.isHidden = !textView.text.isEmpty
+    }
 }
