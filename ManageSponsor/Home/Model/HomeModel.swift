@@ -19,4 +19,5 @@ class HomeModel {
         self.content = content
         self.date = date
     }
+    
 }

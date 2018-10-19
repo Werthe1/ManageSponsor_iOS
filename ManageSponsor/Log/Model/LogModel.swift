@@ -9,6 +9,7 @@
 import UIKit
 
 class LogModel {
+    
     var name : String
     var status : String
     var content : String

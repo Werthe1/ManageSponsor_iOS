@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 
+//MARK: Setting default view
 extension ExpireViewController {
     
     func defaultView() {
@@ -20,7 +21,7 @@ extension ExpireViewController {
     
 }
 
-
+//MARK: Manage tableview
 extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -51,6 +52,7 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
 
 }
 
+//MARK: Refresh protocol
 extension ExpireViewController : RefreshPro {
     
     func addRefresh() {

@@ -9,6 +9,7 @@
 import UIKit
 import Toaster
 
+//MARK: Manage tableview
 extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

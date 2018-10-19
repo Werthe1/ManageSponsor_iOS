@@ -182,6 +182,43 @@
 			path = Font;
 			sourceTree = "<group>";
 		};
+		3541214721798EDE00B83762 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350547EC214A6160005B7531 /* LogViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		3541214821798FD000B83762 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */,
+				350547EE214A6168005B7531 /* ExpireViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		354121492179907C00B83762 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3542DD68215CEC5600867598 /* SettingView.swift */,
+				3542DD66215CDDA600867598 /* SettingViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3541214A2179963100B83762 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				350547F6214A74C4005B7531 /* WriteViewController.swift */,
+				350547F0214A6DFF005B7531 /* HomeViewController.swift */,
+				35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */,
+				3542DD64215CDAF100867598 /* TabbarViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		35A199A9214FE3F5004CB108 /* Home */ = {
 			isa = PBXGroup;
 			children = (
@@ -195,17 +232,14 @@
 		35A199AA214FE408004CB108 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				3541214A2179963100B83762 /* Controller */,
 				35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */,
-				350547F6214A74C4005B7531 /* WriteViewController.swift */,
-				350547F0214A6DFF005B7531 /* HomeViewController.swift */,
-				35A199C7215010C4004CB108 /* WriteCalenderViewController.swift */,
 				35A199B0214FE4D2004CB108 /* HomeView.swift */,
 				35A199B7214FE9E3004CB108 /* WriteView.swift */,
 				35A199C1214FEE62004CB108 /* MonthView.swift */,
 				35A199C3214FFA8E004CB108 /* WeekView.swift */,
 				35A199C521500145004CB108 /* CalenderView.swift */,
 				3568B0C621689391006D0218 /* CalenderCell.swift */,
-				3542DD64215CDAF100867598 /* TabbarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -284,10 +318,9 @@
 		35A199BB214FEA31004CB108 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				350547EE214A6168005B7531 /* ExpireViewController.swift */,
+				3541214821798FD000B83762 /* Controller */,
 				3516423B2152C17700A339EC /* ExpireView.swift */,
 				3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */,
-				3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -311,7 +344,7 @@
 		35A199BE214FEA43004CB108 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				350547EC214A6160005B7531 /* LogViewController.swift */,
+				3541214721798EDE00B83762 /* Controller */,
 				35A8F51521788E8300AFE8DD /* LogTableViewCell.swift */,
 				35A8F51A2178A34100AFE8DD /* LogView.swift */,
 			);
@@ -351,8 +384,7 @@
 		35A8F51721789E6200AFE8DD /* Setting */ = {
 			isa = PBXGroup;
 			children = (
-				3542DD68215CEC5600867598 /* SettingView.swift */,
-				3542DD66215CDDA600867598 /* SettingViewController.swift */,
+				354121492179907C00B83762 /* View */,
 			);
 			path = Setting;
 			sourceTree = "<group>";

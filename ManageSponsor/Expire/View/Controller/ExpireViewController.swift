@@ -11,7 +11,9 @@ import UIKit
 class ExpireViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
+    
     var refresh : UIRefreshControl?
+    var exprieViewModel : ExprieViewModel?
     
     var array1 = ["이지윤","김혜리","홍길동","임꺽정","김나나","김수로","박정준","이서희","옥고인" ]
     var array2 = ["납입기간 : 2018.10.18 ~ 2018.10.18","납입기간 : 2018.10.18 ~ 2018.10.18","납입기간 : 2018.10.18 ~ 2018.10.18","납입기간 : 2018.10.18 ~ 2018.10.18","학교 / 신문방송학과 / 발전기금","미가엘성당 건축 기부금", "해외인턴쉽 지원금", "중앙도서관","100주년 기부금"]

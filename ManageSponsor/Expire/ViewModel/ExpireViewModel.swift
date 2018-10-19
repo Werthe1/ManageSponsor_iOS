@@ -10,20 +10,20 @@ import UIKit
 
 class ExprieViewModel {
     
-//    private var expireModel : LogModel
-//    
-//    init(log: String, date: String) {
-//        self.expireModel = LogModel(log: log, date: date)
-//    }
-//    
-//    var log: String {
-//        return expireModel.log
-//    }
-//    
-//    var date: String {
-//        return expireModel.date
-//    }
-//    
+    private var expireModel : ExprieModel
+    
+    init(name: String, date: String) {
+        self.expireModel = ExprieModel(name: name, date: date)
+    }
+    
+    var name: String {
+        return expireModel.name
+    }
+    
+    var date: String {
+        return expireModel.date
+    }
+    
 }
 
 
