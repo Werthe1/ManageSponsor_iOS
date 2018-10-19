@@ -10,8 +10,12 @@ import Foundation
 import UIKit
 
 extension WriteViewController {
+    
     func defaultPage() {
-
+        
+        totalView.clipsToBounds = true
+        totalView.layer.cornerRadius = 10
+        
         textView.layer.borderWidth = 1
         textView.layer.borderColor = UIColor.darkGray.cgColor
         textView.layer.cornerRadius = 5

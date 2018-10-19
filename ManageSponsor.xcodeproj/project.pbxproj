@@ -33,6 +33,7 @@
 		355E1BF7215A3D9900DFC914 /* LogModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355E1BF6215A3D9900DFC914 /* LogModel.swift */; };
 		3568B0C52168936F006D0218 /* CalenderHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568B0C42168936F006D0218 /* CalenderHelper.swift */; };
 		3568B0C721689391006D0218 /* CalenderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3568B0C621689391006D0218 /* CalenderCell.swift */; };
+		356EDFF1217A169B0008B94B /* ExpireDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356EDFF0217A169B0008B94B /* ExpireDetailView.swift */; };
 		356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D3215BC10200365264 /* ExpireModel.swift */; };
 		356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D5215BC10A00365264 /* ExpireViewModel.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
@@ -84,6 +85,7 @@
 		355E1BF6215A3D9900DFC914 /* LogModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogModel.swift; sourceTree = "<group>"; };
 		3568B0C42168936F006D0218 /* CalenderHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderHelper.swift; sourceTree = "<group>"; };
 		3568B0C621689391006D0218 /* CalenderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderCell.swift; sourceTree = "<group>"; };
+		356EDFF0217A169B0008B94B /* ExpireDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireDetailView.swift; sourceTree = "<group>"; };
 		356FE6D3215BC10200365264 /* ExpireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireModel.swift; sourceTree = "<group>"; };
 		356FE6D5215BC10A00365264 /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -321,6 +323,7 @@
 				3541214821798FD000B83762 /* Controller */,
 				3516423B2152C17700A339EC /* ExpireView.swift */,
 				3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */,
+				356EDFF0217A169B0008B94B /* ExpireDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +562,7 @@
 				350547D9214A50B2005B7531 /* AppDelegate.swift in Sources */,
 				355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */,
 				350547EF214A6168005B7531 /* ExpireViewController.swift in Sources */,
+				356EDFF1217A169B0008B94B /* ExpireDetailView.swift in Sources */,
 				35A199C8215010C4004CB108 /* WriteCalenderViewController.swift in Sources */,
 				355B21F821556B8700D9270F /* LogViewModel.swift in Sources */,
 				355B21F62155695600D9270F /* LoginModel.swift in Sources */,

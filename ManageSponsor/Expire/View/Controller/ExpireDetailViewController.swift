@@ -9,10 +9,19 @@
 import UIKit
 
 class ExpireDetailViewController: UIViewController {
-
+    
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var expireNumberLabel: UILabel!
+    @IBOutlet weak var durationLabel: UILabel!
+    @IBOutlet weak var purposeLabel: UILabel!
+    @IBOutlet weak var methodLabel: UILabel!
+    @IBOutlet weak var moneyLabel: UILabel!
+    @IBOutlet weak var accountInfoLabel: UILabel!
+    @IBOutlet weak var etcLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        defaultView()
     }
 
 }

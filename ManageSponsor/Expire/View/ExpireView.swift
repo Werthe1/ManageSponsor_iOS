@@ -24,6 +24,11 @@ extension ExpireViewController {
 //MARK: Manage tableview
 extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     
+    enum Const {
+        static let closeCellHeight: CGFloat = 170
+        static let openCellHeight: CGFloat = 400
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExpireTableViewCell
         cell.nameLabel.text = array1[indexPath.row]
@@ -50,6 +55,7 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
         self.navigationController?.pushViewController(nv, animated: true)
     }
 
+    
 }
 
 //MARK: Refresh protocol

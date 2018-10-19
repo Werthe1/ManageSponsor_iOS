@@ -9,7 +9,7 @@ target 'ManageSponsor' do
 	 pod 'lottie-ios'
 	 pod 'Toaster'
 	 pod 'SwiftSoup'
-	
+		
   # Pods for ManageSponsor
 
 end
