@@ -13,6 +13,7 @@ import Foundation
 extension HomeViewController {
     
     func defaultPage() {
+    
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
@@ -51,6 +52,11 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return array1.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
+        self.navigationController?.pushViewController(write, animated: false)
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
