@@ -8,7 +8,6 @@
 
 import TransitionButton
 import UIKit
-import Lottie
 
 class ViewController: UIViewController {
     

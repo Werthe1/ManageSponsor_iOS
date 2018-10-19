@@ -345,6 +345,12 @@
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;이지윤&quot; 님의 등록된 정보 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-gb-gEa">
+                                <rect key="frame" x="98" y="50" width="179" height="19"/>
+                                <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -356,11 +362,13 @@
                             <constraint firstItem="2tA-qu-Qz8" firstAttribute="leading" secondItem="Sgp-mR-Q4N" secondAttribute="trailing" constant="23" id="8Cp-1Y-yJ6"/>
                             <constraint firstItem="7RK-1p-DZN" firstAttribute="top" secondItem="Bal-9Y-v4h" secondAttribute="bottom" constant="30" id="ADX-lB-qWT"/>
                             <constraint firstItem="7RK-1p-DZN" firstAttribute="leading" secondItem="xNo-h6-hmW" secondAttribute="trailing" constant="58" id="ASp-eG-ufl"/>
+                            <constraint firstItem="Q6h-gb-gEa" firstAttribute="top" secondItem="EwM-aj-AAd" secondAttribute="top" constant="30" id="F6s-EF-jea"/>
                             <constraint firstItem="Sgp-mR-Q4N" firstAttribute="top" secondItem="Gyg-C2-nwJ" secondAttribute="bottom" constant="30" id="F98-K4-mzJ"/>
                             <constraint firstItem="Ve9-gf-LRg" firstAttribute="top" secondItem="2tA-qu-Qz8" secondAttribute="bottom" constant="30" id="G42-TX-5yG"/>
                             <constraint firstItem="Sgp-mR-Q4N" firstAttribute="leading" secondItem="EwM-aj-AAd" secondAttribute="leading" constant="32" id="Ibk-oU-E40"/>
                             <constraint firstItem="RsN-qX-cky" firstAttribute="top" secondItem="Sgp-mR-Q4N" secondAttribute="bottom" constant="30" id="Idb-8T-oad"/>
                             <constraint firstItem="tn7-Zg-Lx1" firstAttribute="top" secondItem="EwM-aj-AAd" secondAttribute="top" constant="80" id="K8i-Fg-AtB"/>
+                            <constraint firstItem="Q6h-gb-gEa" firstAttribute="centerX" secondItem="ZbJ-W6-Gfq" secondAttribute="centerX" id="KMq-fc-2GB"/>
                             <constraint firstItem="Gyg-C2-nwJ" firstAttribute="leading" secondItem="EwM-aj-AAd" secondAttribute="leading" constant="32" id="Lhi-Wi-ZHR"/>
                             <constraint firstItem="2tA-qu-Qz8" firstAttribute="top" secondItem="rdk-7Z-tJr" secondAttribute="bottom" constant="30" id="Nbg-IO-ruO"/>
                             <constraint firstItem="Ve9-gf-LRg" firstAttribute="leading" secondItem="RsN-qX-cky" secondAttribute="trailing" constant="23" id="ODT-6f-Nuq"/>
@@ -392,6 +400,7 @@
                         <outlet property="moneyLabel" destination="p5S-vm-y2g" id="m6E-k0-JLI"/>
                         <outlet property="nameLabel" destination="tn7-Zg-Lx1" id="AOU-kb-t3q"/>
                         <outlet property="purposeLabel" destination="Sgp-mR-Q4N" id="F7K-1N-xvq"/>
+                        <outlet property="titleLabel" destination="Q6h-gb-gEa" id="Jar-1N-2QU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W37-kD-aTQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -594,6 +603,11 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="TXt-mu-ufl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="eX7-eR-r4O">
+                                    <rect key="frame" x="0.0" y="130" width="375" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell0" rowHeight="73" id="kl3-8I-ltg">
                                         <rect key="frame" x="0.0" y="28" width="375" height="73"/>
@@ -616,6 +630,11 @@
                                                         <action selector="switchChanged:" destination="RK0-rb-zOU" eventType="valueChanged" id="bxR-eT-aw6"/>
                                                     </connections>
                                                 </switch>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fcU-oh-ySm" customClass="TKSmileSwitch" customModule="TKSwitcherCollection">
+                                                    <rect key="frame" x="288" y="11" width="72" height="33"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </view>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="AMP-ST-w0Y" firstAttribute="leading" secondItem="kGZ-FZ-OgH" secondAttribute="leading" constant="16" id="D3z-WO-Ych"/>
@@ -668,7 +687,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="DEs-nC-dlr" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2222" y="1585"/>
+            <point key="canvasLocation" x="2221.5999999999999" y="1584.5577211394304"/>
         </scene>
         <!--로그-->
         <scene sceneID="48q-8k-sK3">

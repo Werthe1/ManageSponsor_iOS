@@ -18,6 +18,7 @@ class ExpireDetailViewController: UIViewController {
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var accountInfoLabel: UILabel!
     @IBOutlet weak var etcLabel: UILabel!
+    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -7,11 +7,12 @@
 //
 
 import UIKit
+import TKSwitcherCollection
 
 class SettingViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self

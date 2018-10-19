@@ -10,6 +10,7 @@ target 'ManageSponsor' do
 	 pod 'Toaster'
 	 pod 'SwiftSoup'
 	 pod 'TransitionButton'
+	 pod 'TKSwitcherCollection'
 		
   # Pods for ManageSponsor
 

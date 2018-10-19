@@ -8,6 +8,7 @@
 
 import UIKit
 import Toaster
+import TKSwitcherCollection
 
 //MARK: Manage tableview
 extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
