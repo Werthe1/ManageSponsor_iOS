@@ -24,18 +24,6 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
         initializeView()
     }
     
-    convenience init(theme: MyTheme) {
-        self.init()
-        
-        if theme == .dark {
-            Style.themeDark()
-        } else {
-            Style.themeLight()
-        }
-        
-        initializeView()
-    }
-    
     func initializeView() {
         currentMonthIndex = Calendar.current.component(.month, from: Date())
         currentYear = Calendar.current.component(.year, from: Date())

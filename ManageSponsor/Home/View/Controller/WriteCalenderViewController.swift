@@ -21,7 +21,6 @@ class WriteCalenderViewController: UIViewController {
 
         self.title = "My Calender"
         self.navigationController?.navigationBar.isTranslucent=false
-        self.view.backgroundColor=Style.bgColor
         
         calView.addSubview(calenderView)
         calenderView.topAnchor.constraint(equalTo: calView.topAnchor, constant: 10).isActive=true
@@ -31,22 +30,21 @@ class WriteCalenderViewController: UIViewController {
         
     }
     
-    override func viewWillLayoutSubviews() {
-        super.viewWillLayoutSubviews()
-        calenderView.myCollectionView.collectionViewLayout.invalidateLayout()
+    override func viewDidLayoutSubviews() {
         constraintY.constant = 0
         
-        UIView.animate(withDuration: 3, animations: {
+        UIView.animate(withDuration: 0.5, animations: {
             self.view.layoutIfNeeded()
         })
     }
+    
     
     @IBAction func saveButtonPressed(_ sender: UIButton) {
         self.dismiss(animated: true, completion: nil)
     }
     
     let calenderView: CalenderView = {
-        let view = CalenderView(theme: MyTheme.light)
+        let view = CalenderView()
         view.translatesAutoresizingMaskIntoConstraints=false
         return view
     }()

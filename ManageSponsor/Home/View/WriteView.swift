@@ -9,11 +9,6 @@
 import Foundation
 import UIKit
 
-enum MyTheme {
-    case light
-    case dark
-}
-
 extension WriteViewController {
     func defaultPage() {
 
@@ -46,9 +41,10 @@ extension WriteViewController {
     }
     
     @objc func pressedButton(){
-        let uv = self.storyboard?.instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
-        uv.modalPresentationStyle = .overCurrentContext
-        self.present(uv, animated: false, completion: nil)
+        
+        let popUp = UIStoryboard.init(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "Calender") as! WriteCalenderViewController
+        popUp.modalPresentationStyle = .overCurrentContext
+        self.present(popUp, animated: false, completion: nil)
     
     }
     

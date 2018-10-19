@@ -84,7 +84,7 @@ class MonthView : UIView {
     
     let rightButton: UIButton = {
        let button = UIButton()
-        button.setTitle("->", for: .normal)
+        button.setTitle("앞", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)
@@ -93,7 +93,7 @@ class MonthView : UIView {
     
     let leftButton: UIButton = {
         let button = UIButton()
-        button.setTitle("<-", for: .normal)
+        button.setTitle("뒤", for: .normal)
         button.setTitleColor(UIColor.black, for: .normal)
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(leftButtonAction(sender:)), for: .touchUpInside)
