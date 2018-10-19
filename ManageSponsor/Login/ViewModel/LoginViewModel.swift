@@ -12,20 +12,20 @@ class LoginViewModel {
     
     private var userInfo : User
     
-    init(name: String, phoneNumber: String, email: String) {
-        self.userInfo = User(name: name, phoneNumber: phoneNumber, email: email)
+    init(id: String, password: String) {
+        self.userInfo = User(id: id, password: password)
     }
     
-    var userName: String {
-        return userInfo.name
+    var id : String {
+        return userInfo.id
     }
     
-    var userPhoneNumber: String {
-        return userInfo.phoneNumber
+    var password : String {
+        return userInfo.password
     }
     
-    var userEmail: String {
-        return userInfo.email
-    }
+}
+
+extension LoginViewModel {
     
 }

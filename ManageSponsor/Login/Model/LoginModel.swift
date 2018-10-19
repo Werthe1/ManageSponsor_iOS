@@ -9,13 +9,13 @@
 import UIKit
 
 struct User {
-    var name : String
-    var phoneNumber : String
-    var email : String
     
-    init(name: String, phoneNumber: String, email: String) {
-        self.name = name
-        self.phoneNumber = phoneNumber
-        self.email = email
+    var id : String
+    
+    var password: String
+    
+    init(id: String, password: String) {
+        self.id = id
+        self.password = password
     }
 }

@@ -12,16 +12,28 @@ class LogViewModel {
     
     private var logModel : LogModel
     
-    init(log: String, date: String) {
-        self.logModel = LogModel(log: log, date: date)
+    init(name: String, status: String, content: String, date: String, logNum: String) {
+        self.logModel = LogModel(name: name, status: status, content: content, date: date, logNum: logNum)
     }
     
-    var log: String {
-        return logModel.log
+    var name: String {
+        return logModel.name
     }
     
-    var date: String {
+    var status : String {
+        return logModel.status
+    }
+    
+    var content : String {
+        return logModel.content
+    }
+    
+    var date : String {
         return logModel.date
+    }
+    
+    var logNum : String {
+        return logModel.logNum
     }
     
 }

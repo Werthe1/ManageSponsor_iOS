@@ -9,11 +9,18 @@
 import UIKit
 
 class LogModel {
-    var log : String
+    var name : String
+    var status : String
+    var content : String
     var date : String
+    var logNum : String
     
-    init(log: String, date: String) {
-        self.log = log
+    init(name: String, status: String, content: String, date: String, logNum: String) {
+        self.name = name
+        self.status = status
+        self.content = content
         self.date = date
+        self.logNum = logNum
     }
+    
 }
