@@ -19,14 +19,13 @@ class WriteCalenderViewController: UIViewController {
         
         constraintY.constant = 1000
 
-        self.title = "My Calender"
         self.navigationController?.navigationBar.isTranslucent=false
         
         calView.addSubview(calenderView)
         calenderView.topAnchor.constraint(equalTo: calView.topAnchor, constant: 10).isActive=true
         calenderView.rightAnchor.constraint(equalTo: calView.rightAnchor, constant: -12).isActive=true
         calenderView.leftAnchor.constraint(equalTo: calView.leftAnchor, constant: 12).isActive=true
-        calenderView.heightAnchor.constraint(equalToConstant: 365).isActive=true
+        calenderView.bottomAnchor.constraint(equalTo: calView.bottomAnchor, constant: 10).isActive = true
         
     }
     
