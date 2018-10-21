@@ -16,8 +16,12 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var calButton: UIButton!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var monthLabel: UIButton!
+    @IBOutlet weak var yearLabel: UIButton!
+    @IBOutlet weak var defaultLabel: UIButton!
     
     var placeholderLabel : UILabel!
+    var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,4 +46,28 @@ class WriteViewController: UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
 
+    @IBAction func monthButtonPressed(_ sender: Any) {
+        
+        yearLabel.layer.borderWidth = 1
+        monthLabel.layer.borderWidth = 3
+        defaultLabel.layer.borderWidth = 1
+
+    }
+    
+    @IBAction func yearButtonPressed(_ sender: Any) {
+        
+        yearLabel.layer.borderWidth = 3
+        monthLabel.layer.borderWidth = 1
+        defaultLabel.layer.borderWidth = 1
+        
+    }
+    
+    @IBAction func defaultButtonPressed(_ sender: Any) {
+        
+        yearLabel.layer.borderWidth = 1
+        monthLabel.layer.borderWidth = 1
+        defaultLabel.layer.borderWidth = 3
+        
+    }
+    
 }

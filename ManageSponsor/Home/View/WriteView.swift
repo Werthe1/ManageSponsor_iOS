@@ -16,9 +16,24 @@ extension WriteViewController {
         totalView.clipsToBounds = true
         totalView.layer.cornerRadius = 10
         
-        textView.layer.borderWidth = 1
-        textView.layer.borderColor = UIColor.darkGray.cgColor
         textView.delegate = self
+        textView.clipsToBounds = true
+        textView.layer.cornerRadius = 12
+        
+        yearLabel.clipsToBounds = true
+        yearLabel.layer.cornerRadius = 15
+        yearLabel.layer.borderWidth = 1
+        yearLabel.layer.borderColor = UIColor.darkGray.cgColor
+        
+        monthLabel.clipsToBounds = true
+        monthLabel.layer.cornerRadius = 15
+        monthLabel.layer.borderWidth = 1
+        monthLabel.layer.borderColor = UIColor.darkGray.cgColor
+        
+        defaultLabel.clipsToBounds = true
+        defaultLabel.layer.cornerRadius = 15
+        defaultLabel.layer.borderWidth = 3
+        defaultLabel.layer.borderColor = UIColor.darkGray.cgColor
         
         placeholderLabel = UILabel()
         placeholderLabel.text = "일정을 등록하세요."        

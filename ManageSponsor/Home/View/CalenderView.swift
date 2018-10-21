@@ -120,6 +120,7 @@ class CalenderView: UIView, UICollectionViewDelegate, UICollectionViewDataSource
 
 //MARK: manage collectionview
 extension CalenderView {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return numberDaysInMonth[currentMonthIndex-1] + firstWeekDayOfMonth - 1
     }
@@ -128,16 +129,15 @@ extension CalenderView {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "Cell", for: indexPath) as! dateCVCell
         cell.backgroundColor=UIColor.clear
         if indexPath.item <= firstWeekDayOfMonth - 2 {
-            cell.isHidden=true
+            cell.isHidden = true
         } else {
             let calcDate = indexPath.row-firstWeekDayOfMonth+2
-            cell.isHidden=false
-            cell.lbl.text="\(calcDate)"
+            cell.isHidden = false
+            cell.lbl.text = "\(calcDate)"
             if calcDate < todayDate && currentYear == presentYear && currentMonthIndex == presentMonthIndex {
-                cell.isUserInteractionEnabled=false
-                cell.lbl.textColor = UIColor.lightGray
+                cell.isUserInteractionEnabled = false
             } else {
-                cell.isUserInteractionEnabled=true
+                cell.isUserInteractionEnabled = true
             }
         }
         return cell
