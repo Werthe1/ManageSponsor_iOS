@@ -26,6 +26,13 @@ extension SettingViewController : UITableViewDataSource, UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 1 {
+            let vc = self.storyboard?.instantiateViewController(withIdentifier: "Login") as! ViewController
+            self.present(vc, animated: true, completion: nil)
+        }
+    }
+    
 }
 
 extension SettingViewController {

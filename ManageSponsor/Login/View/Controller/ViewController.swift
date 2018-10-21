@@ -13,7 +13,6 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var loginButton: TransitionButton!
     @IBOutlet weak var loginView: UIView!
-    @IBOutlet weak var logoImage: UIImageView!
     
     private var loginViewModel : LoginViewModel? 
     
@@ -30,9 +29,15 @@ class ViewController: UIViewController {
     @IBAction func loginButtonPressed(_ sender: UIButton) {
         
         loginButton.startAnimation()
-        if let st = self.storyboard?.instantiateViewController(withIdentifier: "NV") {
-            present(st, animated: true, completion: nil)
+        
+        let deadlineTime = DispatchTime.now() + .seconds(1)
+        DispatchQueue.main.asyncAfter(deadline: deadlineTime) {
+            if let st = self.storyboard?.instantiateViewController(withIdentifier: "NV") {
+                self.present(st, animated: true, completion: nil)
+            }
+            
         }
+
     }
     
 }

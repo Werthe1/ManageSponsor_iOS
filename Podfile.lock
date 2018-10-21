@@ -1,6 +1,7 @@
 PODS:
   - Alamofire (4.7.3)
   - lottie-ios (2.5.0)
+  - Pastel (0.5.1)
   - SwiftSoup (1.7.4)
   - SwiftyJSON (4.1.0)
   - TKSwitcherCollection (1.4.2)
@@ -10,6 +11,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire (~> 4.7)
   - lottie-ios
+  - Pastel
   - SwiftSoup
   - SwiftyJSON (~> 4.0)
   - TKSwitcherCollection
@@ -19,12 +21,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
   lottie-ios: d699fdee68d7b63e721d949388b015fef1aaa4ac
+  Pastel: b3dd5b8d612dac06ae7c63c97c45c900829bc139
   SwiftSoup: 92f5b348c131aed8af04f4326db1579ab19fa08c
   SwiftyJSON: c29297daf073d2aa016295d5809cdd68045c39b3
   TKSwitcherCollection: c0a51de35317a9de292e80b85fa275299607da6b
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
 
-PODFILE CHECKSUM: 98ed8937dbf4ab6b9e35f58676642b8b5d985675
+PODFILE CHECKSUM: 9ad39784568a9a6a749f5c162e594ffa5cdfb0ab
 
 COCOAPODS: 1.4.0

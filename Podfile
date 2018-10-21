@@ -11,6 +11,7 @@ target 'ManageSponsor' do
 	 pod 'SwiftSoup'
 	 pod 'TransitionButton'
 	 pod 'TKSwitcherCollection'
+	 pod "Pastel"
 		
   # Pods for ManageSponsor
 
