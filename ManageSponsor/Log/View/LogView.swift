@@ -33,6 +33,12 @@ extension LogViewController : UITableViewDataSource, UITableViewDelegate {
         return UITableViewAutomaticDimension
     }
     
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+        }
+    }
+    
 }
 
 

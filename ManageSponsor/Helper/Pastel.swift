@@ -9,7 +9,7 @@
 import UIKit
 import Pastel
 
-extension ViewController {
+extension UIViewController {
     func pastel() {
         
         let pastelView = PastelView(frame: view.bounds)

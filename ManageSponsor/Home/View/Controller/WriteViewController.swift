@@ -21,10 +21,10 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var defaultLabel: UIButton!
     
     var placeholderLabel : UILabel!
-    var flag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         defaultPage()
     }
     

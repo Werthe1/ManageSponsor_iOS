@@ -55,6 +55,11 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
         self.navigationController?.pushViewController(nv, animated: true)
     }
 
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+            
+        }
+    }
     
 }
 
