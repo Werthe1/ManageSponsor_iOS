@@ -7,6 +7,7 @@ PODS:
   - TKSwitcherCollection (1.4.2)
   - Toaster (2.1.1)
   - TransitionButton (0.5.1)
+  - ViewAnimator (2.2.0)
 
 DEPENDENCIES:
   - Alamofire (~> 4.7)
@@ -17,6 +18,7 @@ DEPENDENCIES:
   - TKSwitcherCollection
   - Toaster
   - TransitionButton
+  - ViewAnimator
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -27,7 +29,8 @@ SPEC CHECKSUMS:
   TKSwitcherCollection: c0a51de35317a9de292e80b85fa275299607da6b
   Toaster: a6c9532de1ded8105e77376f7dffeb2e12b46dbb
   TransitionButton: 20f92b3cc726b047e4df200fdab5307f33395a81
+  ViewAnimator: a849844cc3698620e1a562b510ed0c28aeafcdc5
 
-PODFILE CHECKSUM: 9ad39784568a9a6a749f5c162e594ffa5cdfb0ab
+PODFILE CHECKSUM: 9634b6131559a809b20f92d12e109a99ec2fd755
 
 COCOAPODS: 1.4.0

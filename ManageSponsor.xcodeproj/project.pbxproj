@@ -36,6 +36,7 @@
 		356EDFF1217A169B0008B94B /* ExpireDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356EDFF0217A169B0008B94B /* ExpireDetailView.swift */; };
 		356FE6D4215BC10200365264 /* ExpireModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D3215BC10200365264 /* ExpireModel.swift */; };
 		356FE6D6215BC10A00365264 /* ExpireViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 356FE6D5215BC10A00365264 /* ExpireViewModel.swift */; };
+		3578AFDA217D696C00B3DC8A /* Pastel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3578AFD9217D696C00B3DC8A /* Pastel.swift */; };
 		35A199B1214FE4D2004CB108 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B0214FE4D2004CB108 /* HomeView.swift */; };
 		35A199B3214FE7E8004CB108 /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */; };
 		35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35A199B7214FE9E3004CB108 /* WriteView.swift */; };
@@ -88,6 +89,7 @@
 		356EDFF0217A169B0008B94B /* ExpireDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireDetailView.swift; sourceTree = "<group>"; };
 		356FE6D3215BC10200365264 /* ExpireModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireModel.swift; sourceTree = "<group>"; };
 		356FE6D5215BC10A00365264 /* ExpireViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireViewModel.swift; sourceTree = "<group>"; };
+		3578AFD9217D696C00B3DC8A /* Pastel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pastel.swift; sourceTree = "<group>"; };
 		35A199B0214FE4D2004CB108 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		35A199B2214FE7E8004CB108 /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
 		35A199B7214FE9E3004CB108 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
@@ -380,6 +382,7 @@
 				353ADF4921710D3100BCFDEB /* TabbarAnimation.swift */,
 				353ADF4B21711CB100BCFDEB /* NavigationHelper.swift */,
 				35A8F5182178A04E00AFE8DD /* Refresh.swift */,
+				3578AFD9217D696C00B3DC8A /* Pastel.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -506,6 +509,7 @@
 				"${BUILT_PRODUCTS_DIR}/TKSwitcherCollection/TKSwitcherCollection.framework",
 				"${BUILT_PRODUCTS_DIR}/Toaster/Toaster.framework",
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
+				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
@@ -517,6 +521,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TKSwitcherCollection.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Toaster.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -557,6 +562,7 @@
 				353ADF4C21711CB100BCFDEB /* NavigationHelper.swift in Sources */,
 				3568B0C721689391006D0218 /* CalenderCell.swift in Sources */,
 				3542DD69215CEC5600867598 /* SettingView.swift in Sources */,
+				3578AFDA217D696C00B3DC8A /* Pastel.swift in Sources */,
 				35A199B8214FE9E3004CB108 /* WriteView.swift in Sources */,
 				350547F1214A6DFF005B7531 /* HomeViewController.swift in Sources */,
 				3541214521798C8600B83762 /* LoginView.swift in Sources */,

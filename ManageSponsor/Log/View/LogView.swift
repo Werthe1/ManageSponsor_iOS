@@ -50,7 +50,10 @@ extension LogViewController : RefreshPro {
     
     @objc func refreshAgain() {
         refresh?.endRefreshing()
-        tableView.reloadData()
-    }
+        
+        UIView.animate(views: tableView.visibleCells, animations: animations, reversed: true,
+                       initialAlpha: 1.0, finalAlpha: 0.0, completion: {
+                        self.tableView.reloadData()
+        })    }
     
 }

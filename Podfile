@@ -12,6 +12,7 @@ target 'ManageSponsor' do
 	 pod 'TransitionButton'
 	 pod 'TKSwitcherCollection'
 	 pod "Pastel"
+	 pod "ViewAnimator"
 		
   # Pods for ManageSponsor
 

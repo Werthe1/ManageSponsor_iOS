@@ -32,7 +32,7 @@ extension WriteViewController {
         
         defaultLabel.clipsToBounds = true
         defaultLabel.layer.cornerRadius = 15
-        defaultLabel.layer.borderWidth = 3
+        defaultLabel.layer.borderWidth = 2
         defaultLabel.layer.borderColor = UIColor.darkGray.cgColor
         
         placeholderLabel = UILabel()

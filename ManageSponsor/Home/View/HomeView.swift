@@ -25,6 +25,7 @@ extension HomeViewController {
         floatingButton.frame = CGRect(x: self.view.frame.width - 61, y: self.view.frame.height - (self.view.frame.height - self.tableView.frame.height), width: 45, height: 45)
         
         addRefresh()
+        
     }
     
     func defaultNavi() {
@@ -47,6 +48,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         cell.titleLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
 
         cell.dateLabel.text = array2[indexPath.row]
+        
         return cell
     }
     
@@ -78,8 +80,14 @@ extension HomeViewController : RefreshPro {
     }
     
     @objc func refreshAgain() {
+        
         refresh?.endRefreshing()
-        tableView.reloadData()
+        
+        UIView.animate(views: tableView.visibleCells, animations: animations, reversed: true,
+                       initialAlpha: 1.0, finalAlpha: 0.0, completion: {
+                        self.tableView.reloadData()
+        })
+        
     }
     
 }

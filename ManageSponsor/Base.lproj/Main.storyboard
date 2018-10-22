@@ -23,14 +23,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hww-yA-y5a">
-                                <rect key="frame" x="16" y="194" width="343" height="235"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hww-yA-y5a">
+                                <rect key="frame" x="16" y="216" width="343" height="235"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-Ew-8cA" customClass="TransitionButton" customModule="TransitionButton">
-                                        <rect key="frame" x="8" y="175" width="327" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-Ew-8cA" customClass="TransitionButton" customModule="TransitionButton">
+                                        <rect key="frame" x="8" y="165" width="327" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="WBB-aM-PHg"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                         <state key="normal" title="SIGN IN">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -39,42 +40,69 @@
                                             <action selector="loginButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="C82-yx-uSY"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력해주세요." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-fA-ONp">
-                                        <rect key="frame" x="10" y="105" width="220" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
-                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디를 입력해주세요." textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xn2-wZ-Z9a">
-                                        <rect key="frame" x="10" y="45" width="220" height="30"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nb4-Mr-cYK">
+                                        <rect key="frame" x="8" y="95" width="327" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="mEG-7f-E6i"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.14999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jVQ-tC-nYA">
+                                        <rect key="frame" x="8" y="37" width="327" height="50"/>
+                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="O2y-dw-8Py"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="아이디를 입력해주세요." clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Xn2-wZ-Z9a">
+                                        <rect key="frame" x="24" y="53" width="319" height="19"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <view alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nb4-Mr-cYK">
-                                        <rect key="frame" x="10" y="95" width="325" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <view alpha="0.14999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jVQ-tC-nYA">
-                                        <rect key="frame" x="10" y="37" width="325" height="50"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="성공회대 후원회 업무 알리미" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-0h-wbj">
-                                        <rect key="frame" x="110" y="222" width="125" height="13"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="비밀번호를 입력해주세요." clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="jdG-fA-ONp">
+                                        <rect key="frame" x="24" y="111" width="319" height="19"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="성공회대 후원회 업무 알리미" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cdu-0h-wbj">
+                                        <rect key="frame" x="109" y="0.0" width="125" height="13"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="11"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="Xn2-wZ-Z9a" firstAttribute="trailing" secondItem="jVQ-tC-nYA" secondAttribute="trailing" constant="8" id="0eQ-4u-ik4"/>
+                                    <constraint firstItem="jdG-fA-ONp" firstAttribute="trailing" secondItem="Nb4-Mr-cYK" secondAttribute="trailing" constant="8" id="9TC-NB-AbM"/>
+                                    <constraint firstAttribute="bottom" secondItem="zBz-Ew-8cA" secondAttribute="bottom" constant="20" id="AeW-cy-szb"/>
+                                    <constraint firstItem="Xn2-wZ-Z9a" firstAttribute="leading" secondItem="jVQ-tC-nYA" secondAttribute="leading" constant="16" id="EKg-Nr-Tx5"/>
+                                    <constraint firstItem="jdG-fA-ONp" firstAttribute="top" secondItem="Nb4-Mr-cYK" secondAttribute="top" constant="16" id="FAX-j4-zoh"/>
+                                    <constraint firstItem="Cdu-0h-wbj" firstAttribute="centerX" secondItem="Hww-yA-y5a" secondAttribute="centerX" id="LgH-cT-exJ"/>
+                                    <constraint firstItem="Xn2-wZ-Z9a" firstAttribute="top" secondItem="jVQ-tC-nYA" secondAttribute="top" constant="16" id="PJG-Z1-qOI"/>
+                                    <constraint firstItem="Nb4-Mr-cYK" firstAttribute="leading" secondItem="Hww-yA-y5a" secondAttribute="leading" constant="8" id="Ut8-6O-vKd"/>
+                                    <constraint firstItem="Nb4-Mr-cYK" firstAttribute="top" secondItem="jVQ-tC-nYA" secondAttribute="bottom" constant="8" id="XWD-75-a6m"/>
+                                    <constraint firstItem="Cdu-0h-wbj" firstAttribute="top" secondItem="Hww-yA-y5a" secondAttribute="top" id="XYW-oQ-j3w"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nb4-Mr-cYK" secondAttribute="trailing" constant="8" id="YOC-y8-gQ7"/>
+                                    <constraint firstItem="jdG-fA-ONp" firstAttribute="leading" secondItem="Nb4-Mr-cYK" secondAttribute="leading" constant="16" id="cUI-d2-5jh"/>
+                                    <constraint firstItem="jVQ-tC-nYA" firstAttribute="leading" secondItem="Hww-yA-y5a" secondAttribute="leading" constant="8" id="edb-Pt-wkg"/>
+                                    <constraint firstAttribute="trailing" secondItem="jVQ-tC-nYA" secondAttribute="trailing" constant="8" id="fN7-gH-OmC"/>
+                                    <constraint firstItem="zBz-Ew-8cA" firstAttribute="leading" secondItem="Hww-yA-y5a" secondAttribute="leading" constant="8" id="lMG-av-bzy"/>
+                                    <constraint firstItem="jVQ-tC-nYA" firstAttribute="top" secondItem="Cdu-0h-wbj" secondAttribute="bottom" constant="24" id="mJd-E9-IQa"/>
+                                    <constraint firstAttribute="height" constant="235" id="p2p-wf-IV2"/>
+                                    <constraint firstAttribute="trailing" secondItem="zBz-Ew-8cA" secondAttribute="trailing" constant="8" id="xIX-x7-wGn"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Hww-yA-y5a" secondAttribute="trailing" constant="16" id="AeI-4P-gv3"/>
+                            <constraint firstItem="Hww-yA-y5a" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="F9r-Ka-UnW"/>
+                            <constraint firstItem="Hww-yA-y5a" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cRe-xh-2nY"/>
+                            <constraint firstItem="Hww-yA-y5a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ztb-xV-TXG"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
@@ -227,111 +255,111 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="약정 번호" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nYq-zh-dck">
-                                <rect key="frame" x="32" y="149" width="65" height="19"/>
+                                <rect key="frame" x="32" y="150" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="010-1234-1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vzG-FP-Qdm">
-                                <rect key="frame" x="120" y="149" width="125" height="19"/>
+                                <rect key="frame" x="119" y="150" width="117.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계좌 정보" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="G8g-Ub-XJ7">
-                                <rect key="frame" x="32" y="394" width="65" height="19"/>
+                                <rect key="frame" x="32" y="400" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="비고" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xNo-h6-hmW">
-                                <rect key="frame" x="32" y="443" width="30" height="19"/>
+                                <rect key="frame" x="32" y="450" width="30" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김혜리 신한 111111111111" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bal-9Y-v4h">
-                                <rect key="frame" x="120" y="394" width="199" height="19"/>
+                                <rect key="frame" x="119" y="400" width="196.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김혜리 신한 111111111111" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7RK-1p-DZN">
-                                <rect key="frame" x="120" y="443" width="199" height="19"/>
+                                <rect key="frame" x="120" y="450" width="196.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="월 납입일" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p5S-vm-y2g">
-                                <rect key="frame" x="32" y="345" width="65" height="19"/>
+                                <rect key="frame" x="32" y="350" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="납입 방법" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RsN-qX-cky">
-                                <rect key="frame" x="32" y="296" width="65" height="19"/>
+                                <rect key="frame" x="32" y="300" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20일" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nxd-0s-sQp">
-                                <rect key="frame" x="120" y="345" width="34" height="19"/>
+                                <rect key="frame" x="119" y="350" width="34" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="기부목적 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sgp-mR-Q4N">
-                                <rect key="frame" x="32" y="247" width="65" height="19"/>
+                                <rect key="frame" x="32" y="250" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="학교 / 소프트웨어공학 / 발전기금" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2tA-qu-Qz8">
-                                <rect key="frame" x="120" y="247" width="228" height="19"/>
+                                <rect key="frame" x="119" y="250" width="221.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018-11-08 ~ 2019-11-08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rdk-7Z-tJr">
-                                <rect key="frame" x="120" y="198" width="211" height="19"/>
+                                <rect key="frame" x="119" y="200" width="197.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="계약 기간" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gyg-C2-nwJ">
-                                <rect key="frame" x="32" y="198" width="65" height="19"/>
+                                <rect key="frame" x="32" y="200" width="64" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이름 " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tn7-Zg-Lx1">
-                                <rect key="frame" x="32" y="100" width="35" height="19"/>
+                                <rect key="frame" x="32" y="100" width="35" height="20"/>
                                 <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="이지윤" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VzJ-QV-eA9">
-                                <rect key="frame" x="120" y="100" width="45" height="19"/>
+                                <rect key="frame" x="120" y="100" width="45" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CMS" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ve9-gf-LRg">
-                                <rect key="frame" x="120" y="296" width="37" height="19"/>
+                                <rect key="frame" x="119" y="300" width="38.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&quot;이지윤&quot; 님의 등록된 정보 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6h-gb-gEa">
-                                <rect key="frame" x="98" y="50" width="179" height="19"/>
+                                <rect key="frame" x="97.5" y="50" width="180.5" height="20"/>
                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -404,29 +432,29 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-pq-2if">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OHF-pq-2if">
                                 <rect key="frame" x="8" y="149" width="359" height="369"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RTO-cJ-ywD">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RTO-cJ-ywD">
                                         <rect key="frame" x="0.0" y="0.0" width="359" height="62"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <subviews>
                                             <view alpha="0.29999999999999999" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KCP-Vw-D9S">
-                                                <rect key="frame" x="32" y="30" width="144" height="15"/>
+                                                <rect key="frame" x="31" y="30" width="145" height="15"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <color key="backgroundColor" red="0.36078431370000003" green="0.3803921569" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                             </view>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="날짜를 선택하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-09-ihD">
-                                                <rect key="frame" x="38" y="21" width="132" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="날짜를 선택하세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lu6-09-ihD">
+                                                <rect key="frame" x="38" y="21" width="127.5" height="20"/>
                                                 <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                                 <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsi-2t-moW">
+                                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dsi-2t-moW">
                                                 <rect key="frame" x="298" y="16" width="30" height="30"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="30" id="rqy-22-hRs"/>
+                                                    <constraint firstAttribute="height" constant="30" id="wNy-GZ-aK0"/>
+                                                </constraints>
                                                 <state key="normal" image="weekly-calendar"/>
                                                 <connections>
                                                     <action selector="calendarButtonPressed:" destination="eTE-HP-ozd" eventType="touchUpInside" id="Wyw-Co-WuH"/>
@@ -434,17 +462,29 @@
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="dsi-2t-moW" firstAttribute="top" secondItem="RTO-cJ-ywD" secondAttribute="top" constant="16" id="7pj-j7-hrg"/>
+                                            <constraint firstItem="lu6-09-ihD" firstAttribute="top" secondItem="RTO-cJ-ywD" secondAttribute="top" constant="21" id="BHM-xP-eQP"/>
+                                            <constraint firstItem="lu6-09-ihD" firstAttribute="leading" secondItem="RTO-cJ-ywD" secondAttribute="leading" constant="38" id="U9l-Re-pVL"/>
+                                            <constraint firstAttribute="trailing" secondItem="dsi-2t-moW" secondAttribute="trailing" constant="31" id="Zus-OX-KSu"/>
+                                            <constraint firstAttribute="height" constant="62" id="gUZ-eo-nv7"/>
+                                        </constraints>
                                     </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="알림을 설정해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-Ro-pLX">
-                                        <rect key="frame" x="39" y="261" width="149" height="19"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <view alpha="0.30000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4as-OF-yYp">
+                                        <rect key="frame" x="31" y="263" width="161" height="15"/>
+                                        <color key="backgroundColor" red="0.36078431370000003" green="0.3803921569" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="15" id="Qic-w2-4ki"/>
+                                        </constraints>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="알림을 설정해 주세요." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jIE-Ro-pLX">
+                                        <rect key="frame" x="38" y="256" width="147" height="20"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsW-sb-Iax">
-                                        <rect key="frame" x="39" y="288" width="50" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vsW-sb-Iax">
+                                        <rect key="frame" x="31" y="285" width="50" height="40"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -455,9 +495,8 @@
                                             <action selector="monthButtonPressed:" destination="eTE-HP-ozd" eventType="touchUpInside" id="Vpc-q8-mLa"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py2-J2-wSa">
-                                        <rect key="frame" x="129" y="288" width="50" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="py2-J2-wSa">
+                                        <rect key="frame" x="97" y="285" width="50" height="40"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -468,9 +507,8 @@
                                             <action selector="yearButtonPressed:" destination="eTE-HP-ozd" eventType="touchUpInside" id="eVY-xL-Zg1"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqh-hj-UMI">
-                                        <rect key="frame" x="219" y="288" width="50" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yqh-hj-UMI">
+                                        <rect key="frame" x="163" y="285" width="50" height="40"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <inset key="contentEdgeInsets" minX="10" minY="10" maxX="10" maxY="10"/>
@@ -481,17 +519,18 @@
                                             <action selector="defaultButtonPressed:" destination="eTE-HP-ozd" eventType="touchUpInside" id="OHH-eA-suf"/>
                                         </connections>
                                     </button>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-jf-IYw">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="IJP-jf-IYw">
                                         <rect key="frame" x="31" y="70" width="297" height="170"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="170" id="0vz-DA-w2b"/>
+                                        </constraints>
                                         <color key="textColor" red="0.14901960780000001" green="0.1450980392" blue="0.1450980392" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                     </textView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-sy-kRT">
-                                        <rect key="frame" x="179" y="329" width="180" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tXe-sy-kRT">
+                                        <rect key="frame" x="184.5" y="332" width="143.5" height="32"/>
                                         <color key="backgroundColor" red="1" green="0.63137254899999995" blue="0.74509803919999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <state key="normal" title="취소">
@@ -501,9 +540,8 @@
                                             <action selector="clearButtonpressed:" destination="eTE-HP-ozd" eventType="touchUpInside" id="7nj-My-VlF"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53P-Ey-VUe">
-                                        <rect key="frame" x="0.0" y="329" width="180" height="40"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="53P-Ey-VUe">
+                                        <rect key="frame" x="31" y="332" width="143.5" height="32"/>
                                         <color key="backgroundColor" red="0.20784313730000001" green="0.36078431370000003" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="17"/>
                                         <state key="normal" title="저장">
@@ -514,14 +552,44 @@
                                         </connections>
                                     </button>
                                 </subviews>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="IJP-jf-IYw" secondAttribute="trailing" constant="31" id="069-tc-CRv"/>
+                                    <constraint firstItem="RTO-cJ-ywD" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" id="2mF-Lw-5z2"/>
+                                    <constraint firstItem="tXe-sy-kRT" firstAttribute="leading" secondItem="53P-Ey-VUe" secondAttribute="trailing" constant="10" id="4Ay-0H-BRP"/>
+                                    <constraint firstItem="yqh-hj-UMI" firstAttribute="leading" secondItem="py2-J2-wSa" secondAttribute="trailing" constant="16" id="6qS-H7-lif"/>
+                                    <constraint firstAttribute="bottom" secondItem="tXe-sy-kRT" secondAttribute="bottom" constant="5" id="DRO-Ib-xrB"/>
+                                    <constraint firstItem="4as-OF-yYp" firstAttribute="centerX" secondItem="jIE-Ro-pLX" secondAttribute="centerX" id="JSR-fH-udH"/>
+                                    <constraint firstAttribute="trailing" secondItem="RTO-cJ-ywD" secondAttribute="trailing" id="JcV-VK-hPa"/>
+                                    <constraint firstAttribute="height" constant="369" id="KGI-PK-qW8"/>
+                                    <constraint firstItem="RTO-cJ-ywD" firstAttribute="top" secondItem="OHF-pq-2if" secondAttribute="top" id="N3j-aJ-E5n"/>
+                                    <constraint firstItem="4as-OF-yYp" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" constant="31" id="ORR-tT-rsC"/>
+                                    <constraint firstItem="53P-Ey-VUe" firstAttribute="top" secondItem="vsW-sb-Iax" secondAttribute="bottom" constant="7" id="Tw6-Og-M91"/>
+                                    <constraint firstItem="53P-Ey-VUe" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" constant="31" id="Uby-Rv-wiG"/>
+                                    <constraint firstItem="IJP-jf-IYw" firstAttribute="top" secondItem="RTO-cJ-ywD" secondAttribute="bottom" constant="8" id="cIu-pP-kCO"/>
+                                    <constraint firstItem="vsW-sb-Iax" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" constant="31" id="cTC-F3-qPN"/>
+                                    <constraint firstItem="tXe-sy-kRT" firstAttribute="width" secondItem="53P-Ey-VUe" secondAttribute="width" id="dmK-P9-ftB"/>
+                                    <constraint firstItem="jIE-Ro-pLX" firstAttribute="top" secondItem="IJP-jf-IYw" secondAttribute="bottom" constant="16" id="gQD-hH-FUw"/>
+                                    <constraint firstItem="py2-J2-wSa" firstAttribute="centerY" secondItem="vsW-sb-Iax" secondAttribute="centerY" id="gyg-IV-zef"/>
+                                    <constraint firstAttribute="bottom" secondItem="53P-Ey-VUe" secondAttribute="bottom" constant="5" id="hky-X7-o9s"/>
+                                    <constraint firstItem="4as-OF-yYp" firstAttribute="top" secondItem="IJP-jf-IYw" secondAttribute="bottom" constant="23" id="pO1-Ky-FxI"/>
+                                    <constraint firstItem="jIE-Ro-pLX" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" constant="38" id="s96-rr-Zcp"/>
+                                    <constraint firstItem="IJP-jf-IYw" firstAttribute="leading" secondItem="OHF-pq-2if" secondAttribute="leading" constant="31" id="tGX-pX-QWF"/>
+                                    <constraint firstAttribute="trailing" secondItem="tXe-sy-kRT" secondAttribute="trailing" constant="31" id="uhS-uG-KnE"/>
+                                    <constraint firstItem="tXe-sy-kRT" firstAttribute="top" secondItem="yqh-hj-UMI" secondAttribute="bottom" constant="7" id="vMz-LG-Gpk"/>
+                                    <constraint firstItem="py2-J2-wSa" firstAttribute="leading" secondItem="vsW-sb-Iax" secondAttribute="trailing" constant="16" id="xEb-by-N3N"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="OHF-pq-2if" firstAttribute="leading" secondItem="kAK-tT-edc" secondAttribute="leading" constant="8" id="6tq-tC-9zm"/>
+                            <constraint firstItem="OHF-pq-2if" firstAttribute="centerY" secondItem="fG2-bI-qPI" secondAttribute="centerY" id="EQs-Ns-J6Z"/>
                             <constraint firstItem="AUY-fT-eEV" firstAttribute="top" secondItem="fG2-bI-qPI" secondAttribute="top" id="WPR-lR-wSN"/>
                             <constraint firstItem="AUY-fT-eEV" firstAttribute="leading" secondItem="kAK-tT-edc" secondAttribute="leading" id="Yaf-Ti-jNC"/>
+                            <constraint firstItem="OHF-pq-2if" firstAttribute="centerX" secondItem="fG2-bI-qPI" secondAttribute="centerX" id="YuO-6v-pN8"/>
                             <constraint firstItem="AUY-fT-eEV" firstAttribute="trailing" secondItem="kAK-tT-edc" secondAttribute="trailing" id="c3M-LK-lVY"/>
+                            <constraint firstItem="kAK-tT-edc" firstAttribute="trailing" secondItem="OHF-pq-2if" secondAttribute="trailing" constant="8" id="tJF-OE-hPL"/>
                             <constraint firstItem="AUY-fT-eEV" firstAttribute="bottom" secondItem="kAK-tT-edc" secondAttribute="bottom" id="yNg-Bo-NGM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="kAK-tT-edc"/>
@@ -548,7 +616,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" alpha="0.69999999999999996" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-Ih-gmU">
+                            <imageView userInteractionEnabled="NO" alpha="0.5" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OJI-Ih-gmU">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>

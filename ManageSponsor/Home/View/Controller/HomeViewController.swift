@@ -9,6 +9,7 @@
 import UIKit
 import Alamofire
 import SwiftSoup
+import ViewAnimator
 
 class HomeViewController: UIViewController {
 
@@ -19,6 +20,8 @@ class HomeViewController: UIViewController {
     var array2 = ["김혜리 ", "2019-01-10", "2018-12-01", "2018-11-17"]
     var refresh : UIRefreshControl?
     
+    let animations = [AnimationType.from(direction: .bottom, offset: 30.0)]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultPage()

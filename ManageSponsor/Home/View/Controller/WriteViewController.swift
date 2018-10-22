@@ -49,14 +49,14 @@ class WriteViewController: UIViewController {
     @IBAction func monthButtonPressed(_ sender: Any) {
         
         yearLabel.layer.borderWidth = 1
-        monthLabel.layer.borderWidth = 3
+        monthLabel.layer.borderWidth = 2
         defaultLabel.layer.borderWidth = 1
 
     }
     
     @IBAction func yearButtonPressed(_ sender: Any) {
         
-        yearLabel.layer.borderWidth = 3
+        yearLabel.layer.borderWidth = 2
         monthLabel.layer.borderWidth = 1
         defaultLabel.layer.borderWidth = 1
         
@@ -66,7 +66,7 @@ class WriteViewController: UIViewController {
         
         yearLabel.layer.borderWidth = 1
         monthLabel.layer.borderWidth = 1
-        defaultLabel.layer.borderWidth = 3
+        defaultLabel.layer.borderWidth = 2
         
     }
     

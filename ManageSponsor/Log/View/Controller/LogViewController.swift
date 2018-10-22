@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import ViewAnimator
 
 class LogViewController: UIViewController {
     
@@ -16,7 +17,8 @@ class LogViewController: UIViewController {
     
     var refresh : UIRefreshControl?
     var logViewModel : LoginViewModel?
-    
+    let animations = [AnimationType.from(direction: .bottom, offset: 30.0)]
+
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.delegate = self
