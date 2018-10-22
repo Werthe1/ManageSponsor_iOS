@@ -19,6 +19,11 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var monthLabel: UIButton!
     @IBOutlet weak var yearLabel: UIButton!
     @IBOutlet weak var defaultLabel: UIButton!
+    @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var monthCheck: UIImageView!
+    @IBOutlet weak var yearCheck: UIImageView!
+    @IBOutlet weak var defaultCheck: UIImageView!
     
     var placeholderLabel : UILabel!
     
@@ -48,25 +53,25 @@ class WriteViewController: UIViewController {
 
     @IBAction func monthButtonPressed(_ sender: Any) {
         
-        yearLabel.layer.borderWidth = 1
-        monthLabel.layer.borderWidth = 2
-        defaultLabel.layer.borderWidth = 1
+        monthCheck.alpha = 1
+        yearCheck.alpha = 0
+        defaultCheck.alpha = 0
 
     }
     
     @IBAction func yearButtonPressed(_ sender: Any) {
         
-        yearLabel.layer.borderWidth = 2
-        monthLabel.layer.borderWidth = 1
-        defaultLabel.layer.borderWidth = 1
+        monthCheck.alpha = 0
+        yearCheck.alpha = 1
+        defaultCheck.alpha = 0
         
     }
     
     @IBAction func defaultButtonPressed(_ sender: Any) {
         
-        yearLabel.layer.borderWidth = 1
-        monthLabel.layer.borderWidth = 1
-        defaultLabel.layer.borderWidth = 2
+        monthCheck.alpha = 0
+        yearCheck.alpha = 0
+        defaultCheck.alpha = 1
         
     }
     

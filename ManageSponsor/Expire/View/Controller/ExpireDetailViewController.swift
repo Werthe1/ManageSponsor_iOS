@@ -10,6 +10,7 @@ import UIKit
 
 class ExpireDetailViewController: UIViewController {
     
+    @IBOutlet weak var extraView: UIView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var expireNumberLabel: UILabel!
     @IBOutlet weak var durationLabel: UILabel!
@@ -18,11 +19,26 @@ class ExpireDetailViewController: UIViewController {
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var accountInfoLabel: UILabel!
     @IBOutlet weak var etcLabel: UILabel!
-    @IBOutlet weak var titleLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultView()
     }
 
+    @IBAction func callButtonPressed(_ sender: Any) {
+        
+        let number = "01051073914"
+        if let phoneCallURL = URL(string: "tel://\(number)") {
+            
+            let application:UIApplication = UIApplication.shared
+            
+            if (application.canOpenURL(phoneCallURL)) {
+                
+                application.open(phoneCallURL, options: [:], completionHandler: nil)
+                
+            }
+            
+        }
+        
+    }
 }

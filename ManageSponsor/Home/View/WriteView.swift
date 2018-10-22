@@ -20,23 +20,23 @@ extension WriteViewController {
         textView.clipsToBounds = true
         textView.layer.cornerRadius = 12
         
+        saveButton.clipsToBounds = true
+        saveButton.layer.cornerRadius = 5
+        
+        cancelButton.clipsToBounds = true
+        cancelButton.layer.cornerRadius = 5
+        
         yearLabel.clipsToBounds = true
-        yearLabel.layer.cornerRadius = 15
-        yearLabel.layer.borderWidth = 1
-        yearLabel.layer.borderColor = UIColor.darkGray.cgColor
+        yearLabel.layer.cornerRadius = 10
         
         monthLabel.clipsToBounds = true
-        monthLabel.layer.cornerRadius = 15
-        monthLabel.layer.borderWidth = 1
-        monthLabel.layer.borderColor = UIColor.darkGray.cgColor
-        
+        monthLabel.layer.cornerRadius = 10
+
         defaultLabel.clipsToBounds = true
-        defaultLabel.layer.cornerRadius = 15
-        defaultLabel.layer.borderWidth = 2
-        defaultLabel.layer.borderColor = UIColor.darkGray.cgColor
-        
+        defaultLabel.layer.cornerRadius = 10
+
         placeholderLabel = UILabel()
-        placeholderLabel.text = "일정을 등록하세요."        
+        placeholderLabel.text = " 일정을 등록하세요."        
         placeholderLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
         placeholderLabel.sizeToFit()
         textView.addSubview(placeholderLabel)
