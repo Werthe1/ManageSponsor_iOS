@@ -13,27 +13,43 @@ import UIKit
 extension ExpireViewController {
     
     func defaultView() {
+        
         tableView.delegate = self
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         addRefresh()
+        
+        db.collection("Agreement").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    
+                    print(document.data())
+                    
+                    let dat : String = "\(document.data()["startDate"] as! String) ~ \(document.data()["endDate"] as! String)"
+                    
+                    self.exprieList.append(ExprieModel(name: document.data()["accountHolder"] as! String, date: dat, payday: document.data()["payDay"] as! Int))
+             
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+        
     }
     
 }
 
 //MARK: Manage tableview
 extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
-    
-    enum Const {
-        static let closeCellHeight: CGFloat = 170
-        static let openCellHeight: CGFloat = 400
-    }
-    
+
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExpireTableViewCell
-        cell.nameLabel.text = array1[indexPath.row]
-        cell.purposeLabel.text = array2[indexPath.row]
-        cell.dateLabel.text = array3[indexPath.row]
+        cell.nameLabel.text = exprieList[indexPath.row].name
+        cell.purposeLabel.text = String(exprieList[indexPath.row].payday)
+        cell.dateLabel.text = exprieList[indexPath.row].date
+        cell.dueLabel.text = "만료 52일 전"
         
         cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 16)
         cell.dueLabel.font = UIFont(name: "KoPubDotumBold", size: 14)
@@ -43,7 +59,7 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array1.count
+        return exprieList.count
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {

@@ -12,8 +12,8 @@ class ExprieViewModel {
     
     private var expireModel : ExprieModel
     
-    init(name: String, date: String) {
-        self.expireModel = ExprieModel(name: name, date: date)
+    init(name: String, date: String, payday: Int) {
+        self.expireModel = ExprieModel(name: name, date: date, payday: payday)
     }
     
     var name: String {

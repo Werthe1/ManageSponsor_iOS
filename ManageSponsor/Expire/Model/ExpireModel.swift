@@ -12,9 +12,11 @@ class ExprieModel {
     
     var name : String
     var date : String
+    var payday : Int
     
-    init(name: String, date: String) {
+    init(name: String, date: String, payday: Int) {
         self.name = name
         self.date = date
+        self.payday = payday
     }
 }
