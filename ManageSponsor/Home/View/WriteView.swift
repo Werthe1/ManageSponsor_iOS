@@ -38,8 +38,14 @@ extension WriteViewController {
         placeholderLabel = UILabel()
 
         if WriteViewController.myData != nil {
+          
             dateLabel.text = WriteViewController.myData?.date
             textView.text = WriteViewController.myData?.content
+            
+            if let state = WriteViewController.myData?.alert {
+                updateCheck(state: state)
+            }
+            
             placeholderLabel.text = ""
 
         } else {
@@ -79,6 +85,26 @@ extension WriteViewController {
     @objc func doneButton() {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    func updateCheck(state : Int) {
+        
+        switch state {
+        case 1:
+            monthCheck.alpha = 1
+            yearCheck.alpha = 0
+            defaultCheck.alpha = 0
+        case 2:
+            monthCheck.alpha = 0
+            yearCheck.alpha = 1
+            defaultCheck.alpha = 0
+        default:
+            monthCheck.alpha = 0
+            yearCheck.alpha = 0
+            defaultCheck.alpha = 1
+        }
+        
+    }
+    
     
 }
 

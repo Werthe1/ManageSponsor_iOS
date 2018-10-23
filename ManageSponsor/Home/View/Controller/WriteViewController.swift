@@ -28,6 +28,7 @@ class WriteViewController: UIViewController {
     
     let calender = Notification.Name(rawValue: calenderClicked)
     let db = Firestore.firestore()
+    var state = 0
     
     static var myData : HomeModel?
         
@@ -64,7 +65,7 @@ class WriteViewController: UIViewController {
         let docu : [String:Any] = ["content": textView.text,
                                    "date": dateLabel.text,
                                    "writer": "김혜리",
-                                   "alert": 0
+                                   "alert": state
         ]
         
         db.collection("Schedule").addDocument(data: docu) { (err) in
@@ -87,25 +88,22 @@ class WriteViewController: UIViewController {
     
     @IBAction func monthButtonPressed(_ sender: Any) {
         
-        monthCheck.alpha = 1
-        yearCheck.alpha = 0
-        defaultCheck.alpha = 0
+        state = 1
+        updateCheck(state: state)
 
     }
     
     @IBAction func yearButtonPressed(_ sender: Any) {
         
-        monthCheck.alpha = 0
-        yearCheck.alpha = 1
-        defaultCheck.alpha = 0
+        state = 2
+        updateCheck(state: state)
         
     }
     
     @IBAction func defaultButtonPressed(_ sender: Any) {
         
-        monthCheck.alpha = 0
-        yearCheck.alpha = 0
-        defaultCheck.alpha = 1
+        state = 0
+        updateCheck(state: state)
         
     }
     
