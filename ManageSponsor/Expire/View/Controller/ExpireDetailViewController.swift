@@ -7,27 +7,39 @@
 //
 
 import UIKit
+import Firebase
 
 class ExpireDetailViewController: UIViewController {
     
+    @IBOutlet weak var etcMentionLabel: UILabel!
+    @IBOutlet weak var purLabel: UILabel!
+    @IBOutlet weak var durationDayLabel: UILabel!
+    @IBOutlet weak var sponsorName: UILabel!
+    @IBOutlet weak var payAccount: UILabel!
+    @IBOutlet weak var payDayLabel: UILabel!
+    @IBOutlet weak var payMethod: UILabel!
+    @IBOutlet weak var payLabel: UILabel!
+    @IBOutlet weak var sponsorNum: UILabel!
     @IBOutlet weak var extraView: UIView!
+    @IBOutlet weak var birthdayLabel: UILabel!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var expireNumberLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var purposeLabel: UILabel!
     @IBOutlet weak var methodLabel: UILabel!
     @IBOutlet weak var moneyLabel: UILabel!
     @IBOutlet weak var accountInfoLabel: UILabel!
-    @IBOutlet weak var etcLabel: UILabel!
+    @IBOutlet weak var contactNumberLabel: UILabel!
+    
+    static var detailList : ExprieDetailModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         defaultView()
+
     }
 
     @IBAction func callButtonPressed(_ sender: Any) {
         
-        let number = "01051073914"
+        let number = ExpireDetailViewController.detailList?.sponsorContact
         if let phoneCallURL = URL(string: "tel://\(number)") {
             
             let application:UIApplication = UIApplication.shared

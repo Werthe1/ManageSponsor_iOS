@@ -27,9 +27,9 @@ extension ExpireViewController {
                     
                     print(document.data())
                     
-                    let dat : String = "\(document.data()["startDate"] as! String) ~ \(document.data()["endDate"] as! String)"
+                    self.dat = "\(document.data()["startDate"] as! String) ~ \(document.data()["endDate"] as! String)"
                     
-                    self.exprieList.append(ExprieModel(name: document.data()["accountHolder"] as! String, date: dat, payday: document.data()["payDay"] as! Int))
+                        self.exprieList.append(ExprieDetailModel(sponsorName: document.data()["sponsorName"] as! String, startDate: document.data()["startDate"] as! String, payDay: document.data()["payDay"] as! Int, sponsorBirth: document.data()["sponsorBirth"] as! String, endDate: document.data()["endDate"] as! String, accountHolder: document.data()["accountHolder"] as! String, bankName: document.data()["bankName"] as! String, purpose: document.data()["purpose"] as! String, sponsorNum: document.data()["sponsorNum"] as! String, accountNo: document.data()["accountNo"] as! String, payMethod: document.data()["payMethod"] as! String, agreementId: document.data()["agreementId"] as! String, etc: document.data()["etc"] as! String, sponsorContact: document.data()["sponsorContact"] as! String, pay: document.data()["pay"] as! Int))
              
                     self.tableView.reloadData()
                     
@@ -46,10 +46,11 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExpireTableViewCell
-        cell.nameLabel.text = exprieList[indexPath.row].name
-        cell.purposeLabel.text = String(exprieList[indexPath.row].payday)
-        cell.dateLabel.text = exprieList[indexPath.row].date
+        cell.nameLabel.text = exprieList[indexPath.row].sponsorName
+        cell.purposeLabel.text = "\(dat) 일"
+        cell.dateLabel.text = String(exprieList[indexPath.row].payDay)
         cell.dueLabel.text = "만료 52일 전"
+        
         
         cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 16)
         cell.dueLabel.font = UIFont(name: "KoPubDotumBold", size: 14)
@@ -68,6 +69,7 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let nv = self.storyboard?.instantiateViewController(withIdentifier: "ExpireDetail") as! ExpireDetailViewController
+        ExpireDetailViewController.detailList = exprieList[indexPath.row]
         self.navigationController?.pushViewController(nv, animated: true)
     }
 
@@ -103,3 +105,4 @@ extension ExpireViewController : RefreshPro {
     }
     
 }
+

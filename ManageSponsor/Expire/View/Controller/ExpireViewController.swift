@@ -18,10 +18,10 @@ class ExpireViewController: UIViewController {
     var exprieViewModel : ExprieViewModel?
     
     let animations = [AnimationType.from(direction: .bottom, offset: 30.0)]
-   
+    var dat : String = ""
     let db = Firestore.firestore()
     
-    lazy var exprieList = Array<ExprieModel>()
+    lazy var exprieList = Array<ExprieDetailModel>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
