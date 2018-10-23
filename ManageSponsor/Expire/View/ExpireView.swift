@@ -18,24 +18,8 @@ extension ExpireViewController {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         addRefresh()
-        
-        db.collection("Agreement").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    
-                    print(document.data())
-                    
-                    self.dat = "\(document.data()["startDate"] as! String) ~ \(document.data()["endDate"] as! String)"
-                    
-                        self.exprieList.append(ExprieDetailModel(sponsorName: document.data()["sponsorName"] as! String, startDate: document.data()["startDate"] as! String, payDay: document.data()["payDay"] as! Int, sponsorBirth: document.data()["sponsorBirth"] as! String, endDate: document.data()["endDate"] as! String, accountHolder: document.data()["accountHolder"] as! String, bankName: document.data()["bankName"] as! String, purpose: document.data()["purpose"] as! String, sponsorNum: document.data()["sponsorNum"] as! String, accountNo: document.data()["accountNo"] as! String, payMethod: document.data()["payMethod"] as! String, agreementId: document.data()["agreementId"] as! String, etc: document.data()["etc"] as! String, sponsorContact: document.data()["sponsorContact"] as! String, pay: document.data()["pay"] as! Int))
-             
-                    self.tableView.reloadData()
-                    
-                }
-            }
-        }
+    
+        loadData()
         
     }
     
@@ -49,8 +33,18 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
         cell.nameLabel.text = exprieList[indexPath.row].sponsorName
         cell.purposeLabel.text = "\(dat) 일"
         cell.dateLabel.text = String(exprieList[indexPath.row].payDay)
-        cell.dueLabel.text = "만료 52일 전"
         
+        let now = Date()
+        let end = exprieList[indexPath.row].endDate
+        let dateFormatter = DateFormatter()
+        
+        dateFormatter.dateFormat = "yyyy'.'MM'.'dd"
+        
+        if let date = dateFormatter.date(from: end) {
+            let day = getDay(start: now, end: date)
+            cell.dueLabel.text = day
+
+        }
         
         cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 16)
         cell.dueLabel.font = UIFont(name: "KoPubDotumBold", size: 14)
@@ -80,6 +74,25 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     }
     
 }
+//MARK: Between day - day
+extension ExpireViewController {
+    
+    func getDay (start: Date, end: Date ) -> String {
+        let calendar = NSCalendar.current
+        
+        let date1 = calendar.startOfDay(for: start)
+        let date2 = calendar.startOfDay(for: end)
+        
+        let components = calendar.dateComponents([.day], from: date1, to: date2)
+        
+        if let bet = components.day {
+            return "\(bet)일"
+        }
+        return "0 일"
+
+    }
+}
+
 
 //MARK: Refresh protocol
 extension ExpireViewController : RefreshPro {
@@ -99,10 +112,9 @@ extension ExpireViewController : RefreshPro {
         
         UIView.animate(views: tableView.visibleCells, animations: animations, reversed: true,
                        initialAlpha: 1.0, finalAlpha: 0.0, completion: {
-                        self.tableView.reloadData()
+                    self.tableView.reloadData()
         })
         
     }
     
 }
-

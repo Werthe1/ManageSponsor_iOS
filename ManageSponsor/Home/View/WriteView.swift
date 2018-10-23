@@ -36,7 +36,16 @@ extension WriteViewController {
         defaultLabel.layer.cornerRadius = 10
 
         placeholderLabel = UILabel()
-        placeholderLabel.text = " 일정을 등록하세요."        
+
+        if WriteViewController.myData != nil {
+            dateLabel.text = WriteViewController.myData?.date
+            textView.text = WriteViewController.myData?.content
+            placeholderLabel.text = ""
+
+        } else {
+            placeholderLabel.text = " 일정을 등록하세요."
+        }
+        
         placeholderLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
         placeholderLabel.sizeToFit()
         textView.addSubview(placeholderLabel)

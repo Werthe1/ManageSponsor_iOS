@@ -11,10 +11,6 @@ import Firebase
 
 class WriteViewController: UIViewController {
 
-    let calender = Notification.Name(rawValue: calenderClicked)
-    let db = Firestore.firestore()
-
-    
     @IBOutlet weak var totalView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var calButton: UIButton!
@@ -30,10 +26,16 @@ class WriteViewController: UIViewController {
     
     var placeholderLabel : UILabel!
     
+    let calender = Notification.Name(rawValue: calenderClicked)
+    let db = Firestore.firestore()
+    
+    static var myData : HomeModel?
+        
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         defaultPage()
+        
+      
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?){
@@ -51,6 +53,7 @@ class WriteViewController: UIViewController {
     }
     
     @IBAction func clearButtonpressed(_ sender: Any) {
+        WriteViewController.myData = nil
         self.dismiss(animated: false, completion: nil)
     }
 
@@ -70,6 +73,11 @@ class WriteViewController: UIViewController {
                 print("Error writing document: \(err)")
             } else {
                 print("Document successfully written!")
+                
+                let reload = Notification.Name(rawValue: saveClicked)
+                NotificationCenter.default.post(name: reload, object: nil)
+
+                
                 self.dismiss(animated: true, completion: nil)
             }
             

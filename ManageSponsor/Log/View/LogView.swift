@@ -18,18 +18,7 @@ extension LogViewController {
         tableView.rowHeight = UITableViewAutomaticDimension
         
         
-        db.collection("BankLog").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-                    self.logList.append(LogModel(name: document.data()["sposorName"] as! String, status: document.data()["state"] as! String, content: document.data()["donationPurpose"] as! String, date: document.data()["writeDate"] as! String, logNum: document.data()["agreementId"] as! String))
-    
-                    self.tableView.reloadData()
-    
-                }
-            }
-        }
+        loadData()
     
     }
 }
@@ -87,6 +76,9 @@ extension LogViewController : RefreshPro {
         UIView.animate(views: tableView.visibleCells, animations: animations, reversed: true,
                        initialAlpha: 1.0, finalAlpha: 0.0, completion: {
                         self.tableView.reloadData()
-        })    }
+                        
+        })
+        
+    }
     
 }

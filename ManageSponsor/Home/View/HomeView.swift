@@ -26,22 +26,7 @@ extension HomeViewController {
         floatingButton.frame = CGRect(x: self.view.frame.width - 61, y: self.view.frame.height - (self.view.frame.height - self.tableView.frame.height), width: 45, height: 45)
         
         addRefresh()
-        
-        db.collection("Schedule").getDocuments() { (querySnapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in querySnapshot!.documents {
-
-                    print(document.data())
-                    
-                    self.homelist.append(HomeModel(name: document.data()["writer"] as! String, content: document.data()["content"] as! String, date: document.data()["date"] as! String, alert: document.data()["alert"] as! Int))
-                    
-                    self.tableView.reloadData()
-                    
-                }
-            }
-        }
+        loadData()
         
     }
     
@@ -79,6 +64,7 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let write = self.storyboard?.instantiateViewController(withIdentifier: "WriteView") as! WriteViewController
         write.modalPresentationStyle = .overCurrentContext
+        WriteViewController.myData = homelist[indexPath.row]
         self.present(write, animated: false, completion: nil)
     }
     

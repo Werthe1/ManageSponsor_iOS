@@ -28,5 +28,25 @@ class ExpireViewController: UIViewController {
         defaultView()
     }
 
-
+    func loadData() {
+    
+        db.collection("Agreement").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    
+                    print(document.data())
+                    
+                    self.dat = "\(document.data()["startDate"] as! String) ~ \(document.data()["endDate"] as! String)"
+                    
+                    self.exprieList.append(ExprieDetailModel(sponsorName: document.data()["sponsorName"] as! String, startDate: document.data()["startDate"] as! String, payDay: document.data()["payDay"] as! Int, sponsorBirth: document.data()["sponsorBirth"] as! String, endDate: document.data()["endDate"] as! String, accountHolder: document.data()["accountHolder"] as! String, bankName: document.data()["bankName"] as! String, purpose: document.data()["purpose"] as! String, sponsorNum: document.data()["sponsorNum"] as! String, accountNo: document.data()["accountNo"] as! String, payMethod: document.data()["payMethod"] as! String, agreementId: document.data()["agreementId"] as! String, etc: document.data()["etc"] as! String, sponsorContact: document.data()["sponsorContact"] as! String, pay: document.data()["pay"] as! Int))
+                    
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+        
+    }
 }

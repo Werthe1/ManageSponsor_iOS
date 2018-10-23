@@ -10,3 +10,4 @@ import Foundation
 
 let calenderClicked = "com.managesponsor.calender"
 let navigationHidden = "com.managesponsor.navigationHidden"
+let saveClicked = "com.managesponsor.reloadTable"
