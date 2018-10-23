@@ -26,6 +26,7 @@
 		3542DD69215CEC5600867598 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD68215CEC5600867598 /* SettingView.swift */; };
 		3542DD6B215CFE1000867598 /* ExpireTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */; };
 		3542DD6D215D01BD00867598 /* ExpireDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */; };
+		354644CD217F6D6C008D4A08 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 354644CC217F6D6B008D4A08 /* GoogleService-Info.plist */; };
 		3549A33D217B77FF000DC41B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3549A33C217B77FF000DC41B /* Assets.xcassets */; };
 		355B21F42155694C00D9270F /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F32155694C00D9270F /* LoginViewModel.swift */; };
 		355B21F62155695600D9270F /* LoginModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 355B21F52155695600D9270F /* LoginModel.swift */; };
@@ -79,6 +80,7 @@
 		3542DD68215CEC5600867598 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		3542DD6A215CFE1000867598 /* ExpireTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireTableViewCell.swift; sourceTree = "<group>"; };
 		3542DD6C215D01BD00867598 /* ExpireDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpireDetailViewController.swift; sourceTree = "<group>"; };
+		354644CC217F6D6B008D4A08 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		3549A33C217B77FF000DC41B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		355B21F32155694C00D9270F /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		355B21F52155695600D9270F /* LoginModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginModel.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 		350547D7214A50B2005B7531 /* ManageSponsor */ = {
 			isa = PBXGroup;
 			children = (
+				354644CC217F6D6B008D4A08 /* GoogleService-Info.plist */,
 				35A199C9215025F4004CB108 /* Helper */,
 				35A199AF214FE4A4004CB108 /* Login */,
 				35A199AE214FE483004CB108 /* Log */,
@@ -469,6 +472,7 @@
 				35AC2D21217766750033C685 /* KoPub Dotum Medium.ttf in Resources */,
 				35AC2D1F2177666E0033C685 /* KoPub Dotum Bold.ttf in Resources */,
 				350547E3214A50B5005B7531 /* LaunchScreen.storyboard in Resources */,
+				354644CD217F6D6C008D4A08 /* GoogleService-Info.plist in Resources */,
 				3549A33D217B77FF000DC41B /* Assets.xcassets in Resources */,
 				350547DE214A50B2005B7531 /* Main.storyboard in Resources */,
 			);
@@ -503,6 +507,7 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-ManageSponsor/Pods-ManageSponsor-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Pastel/Pastel.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftSoup/SwiftSoup.framework",
 				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
@@ -511,10 +516,12 @@
 				"${BUILT_PRODUCTS_DIR}/TransitionButton/TransitionButton.framework",
 				"${BUILT_PRODUCTS_DIR}/ViewAnimator/ViewAnimator.framework",
 				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pastel.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSoup.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
@@ -523,6 +530,7 @@
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/TransitionButton.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ViewAnimator.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -737,7 +745,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
@@ -753,7 +764,10 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = H92U9KV5T2;
 				INFOPLIST_FILE = ManageSponsor/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.hyeri.ManageSponsor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;

@@ -464,10 +464,13 @@
                                     <constraint firstAttribute="height" constant="69" id="znH-Lh-32X"/>
                                 </constraints>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-D2-vCq">
-                                <rect key="frame" x="120" y="131.5" width="30" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="4"/>
-                                <state key="normal" title="Button"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GrW-D2-vCq">
+                                <rect key="frame" x="120" y="131.5" width="15" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="QOd-9O-hVc"/>
+                                    <constraint firstAttribute="width" constant="15" id="lgp-pl-18b"/>
+                                </constraints>
+                                <state key="normal" image="telephone"/>
                                 <connections>
                                     <action selector="callButtonPressed:" destination="6rH-HB-ojz" eventType="touchUpInside" id="Mcv-jN-zb6"/>
                                 </connections>
@@ -1169,6 +1172,7 @@
         <image name="done" width="24" height="24"/>
         <image name="done_black" width="24" height="24"/>
         <image name="log" width="24" height="24"/>
+        <image name="telephone" width="51.200000762939453" height="51.200000762939453"/>
         <image name="today" width="24" height="24"/>
         <image name="weekly-calendar" width="418.90908813476562" height="418.90908813476562"/>
         <image name="write" width="24" height="24"/>

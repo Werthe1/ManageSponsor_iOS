@@ -12,8 +12,8 @@ class HomeViewModel {
     
     private var homeModel : HomeModel
     
-    init(name: String, content: String, date: String) {
-        homeModel = HomeModel(name: name, content: content, date: date)
+    init(name: String, content: String, date: String , alert: Int) {
+        homeModel = HomeModel(name: name, content: content, date: date, alert: alert)
     }
     
     var name : String {
@@ -26,5 +26,9 @@ class HomeViewModel {
     
     var date: String {
         return homeModel.date
+    }
+    
+    var alert: Int {
+        return homeModel.alert
     }
 }

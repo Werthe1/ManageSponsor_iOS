@@ -13,6 +13,7 @@ target 'ManageSponsor' do
 	 pod 'TKSwitcherCollection'
 	 pod "Pastel"
 	 pod "ViewAnimator"
+	 pod 'Firebase/Core'
 		
   # Pods for ManageSponsor
 
