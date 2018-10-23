@@ -30,7 +30,7 @@ extension LogViewController : UITableViewDataSource, UITableViewDelegate {
         cell.dateLabel.text = logList[indexPath.row].date
         cell.logContentLabel.text = logList[indexPath.row].content
         cell.nameLabel.text = logList[indexPath.row].name
-        cell.numberLabel.text = logList[indexPath.row].logNum
+        cell.numberLabel.text = "약정번호 : \(logList[indexPath.row].logNum)"
         cell.statusLabel.text = logList[indexPath.row].status
         
         cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 15)

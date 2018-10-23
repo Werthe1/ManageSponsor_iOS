@@ -144,26 +144,26 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="pg0-Vp-YtV">
-                                    <rect key="frame" x="0.0" y="141" width="375" height="44"/>
+                                    <rect key="frame" x="0.0" y="163" width="375" height="44"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="113" id="xHc-Z7-izO" customClass="HomeTableViewCell" customModule="ManageSponsor" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="375" height="113"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="Cell" rowHeight="135" id="xHc-Z7-izO" customClass="HomeTableViewCell" customModule="ManageSponsor" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="135"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xHc-Z7-izO" id="9AH-l7-5Zs">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="112.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="134.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2018.08.08" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SZB-NO-ZSn">
-                                                    <rect key="frame" x="16" y="8" width="77" height="16.5"/>
+                                                    <rect key="frame" x="132.5" y="8" width="77" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                                     <color key="textColor" red="0.14901960784313725" green="0.14509803921568626" blue="0.14509803921568626" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSH-SH-Mse">
-                                                    <rect key="frame" x="16" y="32.5" width="318" height="62.5"/>
+                                                    <rect key="frame" x="16" y="55" width="318" height="62.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김정호 고문님 CEO 장학금 요청 - 김태윤 학생 복학 확인했음. 지원 김태윤 학생에게 계속하는지 여부 확인할 것." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MJc-8B-3wO">
                                                             <rect key="frame" x="8" y="8" width="302" height="46.5"/>
@@ -181,21 +181,21 @@
                                                     </constraints>
                                                 </view>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김혜리" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Fk-wt-hC0">
-                                                    <rect key="frame" x="294.5" y="8" width="39.5" height="16.5"/>
+                                                    <rect key="frame" x="294.5" y="32.5" width="39.5" height="16.5"/>
                                                     <fontDescription key="fontDescription" name="KoPubDotumMedium" family="KoPubDotum" pointSize="15"/>
                                                     <color key="textColor" red="0.3411764706" green="0.35686274509999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="8Fk-wt-hC0" secondAttribute="trailing" constant="8" id="0Vz-xI-XNS"/>
-                                                <constraint firstItem="SZB-NO-ZSn" firstAttribute="leading" secondItem="9AH-l7-5Zs" secondAttribute="leading" constant="16" id="4w8-e7-9PL"/>
-                                                <constraint firstItem="vSH-SH-Mse" firstAttribute="top" secondItem="SZB-NO-ZSn" secondAttribute="bottom" constant="8" id="AQH-lv-gVk"/>
                                                 <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="vSH-SH-Mse" secondAttribute="bottom" constant="8" id="Gd9-s5-eKV"/>
-                                                <constraint firstItem="8Fk-wt-hC0" firstAttribute="top" secondItem="9AH-l7-5Zs" secondAttribute="top" constant="8" id="Ovw-na-c4p"/>
+                                                <constraint firstItem="vSH-SH-Mse" firstAttribute="top" secondItem="8Fk-wt-hC0" secondAttribute="bottom" constant="6" id="LHm-4S-0uG"/>
+                                                <constraint firstItem="8Fk-wt-hC0" firstAttribute="top" secondItem="SZB-NO-ZSn" secondAttribute="bottom" constant="8" id="Mbh-f5-d2H"/>
                                                 <constraint firstItem="vSH-SH-Mse" firstAttribute="leading" secondItem="9AH-l7-5Zs" secondAttribute="leading" constant="16" id="QLx-yT-rjZ"/>
                                                 <constraint firstItem="SZB-NO-ZSn" firstAttribute="top" secondItem="9AH-l7-5Zs" secondAttribute="top" constant="8" id="VMH-rm-89b"/>
                                                 <constraint firstAttribute="trailing" secondItem="vSH-SH-Mse" secondAttribute="trailing" constant="8" id="jjq-Sl-0vX"/>
+                                                <constraint firstAttribute="trailing" secondItem="8Fk-wt-hC0" secondAttribute="trailing" constant="8" id="wf1-jW-VDD"/>
+                                                <constraint firstItem="SZB-NO-ZSn" firstAttribute="centerX" secondItem="9AH-l7-5Zs" secondAttribute="centerX" id="wyk-Wa-MQb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>

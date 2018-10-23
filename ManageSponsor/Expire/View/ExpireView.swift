@@ -31,8 +31,8 @@ extension ExpireViewController : UITableViewDataSource, UITableViewDelegate{
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! ExpireTableViewCell
         cell.nameLabel.text = exprieList[indexPath.row].sponsorName
-        cell.purposeLabel.text = "\(dat) 일"
-        cell.dateLabel.text = String(exprieList[indexPath.row].payDay)
+        cell.purposeLabel.text = "\(dat) "
+        cell.dateLabel.text = "납입일 : \(String(exprieList[indexPath.row].payDay))"
         
         let now = Date()
         let end = exprieList[indexPath.row].endDate
@@ -86,9 +86,9 @@ extension ExpireViewController {
         let components = calendar.dateComponents([.day], from: date1, to: date2)
         
         if let bet = components.day {
-            return "\(bet)일"
+            return "만료까지 \(bet) 일"
         }
-        return "0 일"
+        return "만료까지 0 일"
 
     }
 }

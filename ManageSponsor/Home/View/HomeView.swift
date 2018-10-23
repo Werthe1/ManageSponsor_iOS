@@ -36,6 +36,35 @@ extension HomeViewController {
         
         initNavigation()
     }
+    
+    func updateYearMonthDay(day: String) -> String {
+        
+        let count = day.count
+        var getDay = day
+
+        switch count {
+        case 10:
+            
+            getDay.insert("년", at: getDay.index(getDay.startIndex, offsetBy: 5))
+            getDay.insert("월", at: getDay.index(getDay.startIndex, offsetBy: 9))
+            getDay.insert("일", at: getDay.index(getDay.startIndex, offsetBy: 12))
+            
+        case 11:
+            
+            getDay.insert("년", at: getDay.index(getDay.startIndex, offsetBy: 5))
+            getDay.insert("월", at: getDay.index(getDay.startIndex, offsetBy: 9))
+            getDay.insert("일", at: getDay.index(getDay.startIndex, offsetBy: 13))
+            
+        default:
+            
+            getDay.insert("년", at: getDay.index(getDay.startIndex, offsetBy: 5))
+            getDay.insert("월", at: getDay.index(getDay.startIndex, offsetBy: 8))
+            getDay.insert("일", at: getDay.index(getDay.startIndex, offsetBy: 11))
+            
+        }
+                
+        return getDay
+    }
 
 }
 
@@ -48,12 +77,13 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
         cell.outView.clipsToBounds = true
         cell.outView.layer.cornerRadius = 10
         
-        cell.titleLabel.text = homelist[indexPath.row].date
+        let getDay = updateYearMonthDay(day: homelist[indexPath.row].date)
+
+        cell.titleLabel.text = getDay
+
         cell.dateLabel.text = homelist[indexPath.row].name
         cell.contentLabel.text = homelist[indexPath.row].content
         
-        cell.titleLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
-
         return cell
     }
     
