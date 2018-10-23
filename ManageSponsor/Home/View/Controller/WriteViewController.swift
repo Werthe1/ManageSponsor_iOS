@@ -7,10 +7,13 @@
 //
 
 import UIKit
+import Firebase
 
 class WriteViewController: UIViewController {
 
     let calender = Notification.Name(rawValue: calenderClicked)
+    let db = Firestore.firestore()
+
     
     @IBOutlet weak var totalView: UIView!
     @IBOutlet weak var dateLabel: UILabel!
@@ -51,6 +54,29 @@ class WriteViewController: UIViewController {
         self.dismiss(animated: false, completion: nil)
     }
 
+    @IBAction func saveButtonPressed(_ sender: UIButton) {
+        
+        let ref: DocumentReference? = nil
+        
+        let docu : [String:Any] = ["content": textView.text,
+                                   "date": dateLabel.text,
+                                   "writer": "김혜리",
+                                   "alert": 0
+        ]
+        
+        db.collection("Schedule").addDocument(data: docu) { (err) in
+           
+            if let err = err {
+                print("Error writing document: \(err)")
+            } else {
+                print("Document successfully written!")
+                self.dismiss(animated: true, completion: nil)
+            }
+            
+        }
+        
+    }
+    
     @IBAction func monthButtonPressed(_ sender: Any) {
         
         monthCheck.alpha = 1

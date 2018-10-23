@@ -14,6 +14,8 @@ target 'ManageSponsor' do
 	 pod "Pastel"
 	 pod "ViewAnimator"
 	 pod 'Firebase/Core'
+ 	 pod 'Firebase/Firestore'
+
 		
   # Pods for ManageSponsor
 

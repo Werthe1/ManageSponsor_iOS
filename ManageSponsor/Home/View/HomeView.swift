@@ -8,6 +8,7 @@
 
 import UIKit
 import Foundation
+import Firebase
 
 //MARK: Default view manage
 extension HomeViewController {
@@ -26,6 +27,22 @@ extension HomeViewController {
         
         addRefresh()
         
+        db.collection("Schedule").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+
+                    print(document.data())
+                    
+                    self.homelist.append(HomeModel(name: document.data()["writer"] as! String, content: document.data()["content"] as! String, date: document.data()["date"] as! String, alert: document.data()["alert"] as! Int))
+                    
+                    self.tableView.reloadData()
+                    
+                }
+            }
+        }
+        
     }
     
     func defaultNavi() {
@@ -42,18 +59,21 @@ extension HomeViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! HomeTableViewCell
+        
         cell.outView.clipsToBounds = true
         cell.outView.layer.cornerRadius = 10
-        cell.titleLabel.text = array1[indexPath.row]
+        
+        cell.titleLabel.text = homelist[indexPath.row].date
+        cell.dateLabel.text = homelist[indexPath.row].name
+        cell.contentLabel.text = homelist[indexPath.row].content
+        
         cell.titleLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
 
-        cell.dateLabel.text = array2[indexPath.row]
-        
         return cell
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array1.count
+        return homelist.count
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

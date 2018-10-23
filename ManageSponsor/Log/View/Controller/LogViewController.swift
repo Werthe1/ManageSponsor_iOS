@@ -8,22 +8,24 @@
 
 import UIKit
 import ViewAnimator
+import Firebase
 
 class LogViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-    
-    var array1 = ["이지윤님의이지윤님의이지윤님의이지윤님의이지윤님의이지윤님의이지윤님의 개인정보가 변경되었습니다.","김혜리님의 개인정보가 변경되었습니다.","홍길동님의 개인정보가 변경되었습니다."]
-    
+
     var refresh : UIRefreshControl?
     var logViewModel : LoginViewModel?
     let animations = [AnimationType.from(direction: .bottom, offset: 30.0)]
 
+    let db = Firestore.firestore()
+
+    lazy var logList = Array<LogModel>()
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.delegate = self
-        tableView.dataSource = self
-        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        defaultView()
         addRefresh()
         
     }

@@ -7,16 +7,42 @@
 //
 
 import UIKit
+import Firebase
+
+extension LogViewController {
+    
+    func defaultView () {
+    
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.rowHeight = UITableViewAutomaticDimension
+        
+        
+        db.collection("BankLog").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in querySnapshot!.documents {
+                    self.logList.append(LogModel(name: document.data()["sposorName"] as! String, status: document.data()["state"] as! String, content: document.data()["donationPurpose"] as! String, date: document.data()["writeDate"] as! String, logNum: document.data()["agreementId"] as! String))
+    
+                    self.tableView.reloadData()
+    
+                }
+            }
+        }
+    
+    }
+}
 
 extension LogViewController : UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! LogTableViewCell
-        cell.dateLabel.text = "2018.07.11"
-        cell.logContentLabel.text = array1[indexPath.row]
-        cell.nameLabel.text = "이지윤"
-        cell.numberLabel.text = "0101010101"
-        cell.statusLabel.text = "정상"
+        cell.dateLabel.text = logList[indexPath.row].date
+        cell.logContentLabel.text = logList[indexPath.row].content
+        cell.nameLabel.text = logList[indexPath.row].name
+        cell.numberLabel.text = logList[indexPath.row].logNum
+        cell.statusLabel.text = logList[indexPath.row].status
         
         cell.nameLabel.font = UIFont(name: "KoPubDotumBold", size: 15)
         cell.logContentLabel.font = UIFont(name: "KoPubDotumMedium", size: 14)
@@ -26,7 +52,8 @@ extension LogViewController : UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return array1.count
+        return logList.count
+        
     }
     
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -43,7 +70,7 @@ extension LogViewController : UITableViewDataSource, UITableViewDelegate {
 
 
 extension LogViewController : RefreshPro {
-  
+    
     func addRefresh() {
         refresh = UIRefreshControl()
         refresh?.tintColor = UIColor.black
