@@ -39,14 +39,21 @@ class ExpireDetailViewController: UIViewController {
 
     @IBAction func callButtonPressed(_ sender: Any) {
         
-        let number = ExpireDetailViewController.detailList?.sponsorContact
-        if let phoneCallURL = URL(string: "tel://\(number)") {
+        if let number = ExpireDetailViewController.detailList?.sponsorContact {
             
-            let application:UIApplication = UIApplication.shared
+            var num = number
             
-            if (application.canOpenURL(phoneCallURL)) {
+            num = number.replacingOccurrences(of: "-", with: "", options: NSString.CompareOptions.literal, range: nil)
+            
+            if let phoneCallURL = URL(string: "tel://\(num)") {
                 
-                application.open(phoneCallURL, options: [:], completionHandler: nil)
+                let application:UIApplication = UIApplication.shared
+                
+                if (application.canOpenURL(phoneCallURL)) {
+                    
+                    application.open(phoneCallURL, options: [:], completionHandler: nil)
+                    
+                }
                 
             }
             
