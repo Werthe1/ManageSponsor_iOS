@@ -32,3 +32,27 @@
 ### 개발환경
 * 언어 : Swift4
 * 개발환경 : Xcode
+
+### SwiftSoup
+>https://github.com/scinfu/SwiftSoup
+
+        // get html
+
+        let doc : Document = try SwiftSoup.parse(html)
+ 
+            //multiple element
+            
+            let script : [Element] = try doc.select("script").array()
+            for i in script {
+    
+                // set data 
+            }
+            
+        } catch Exception.Error(type: let type, Message: let message) {
+            print(type)
+            print(message)
+        } catch {
+            print("")
+        }
+        
+        
